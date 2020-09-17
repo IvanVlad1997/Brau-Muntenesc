@@ -4,14 +4,14 @@ import history from '../../history'
 
 export const adaugaCategorie = (p) => (dispatch) => {
     return firestore.collection('categorieAtelier').add({
-       numeCategorie: p.categorie,
+       numeCategorie: p.numeCategorie,
        descriere: p.descriere,
        linkImagine: p.linkImagine
 
     })
-    .then((doc)=> {
+    .then(()=> {
             const date = {}
-            date.categorie = p.categorie
+            date.numeCategorie = p.numeCategorie
             date.descriere = p.descriere
             date.linkImagine = p.linkImagine
             dispatch({type: ActionTypes.ADAUGA_CATEGORIE, payload: date})
@@ -27,13 +27,13 @@ export const aducCategorie = () => dispatch => {
         let Categorie = [];
         snapshot.forEach(doc => {
             const c = doc.data()
-            const categorie = c.categorie
+            const numeCategorie = c.numeCategorie
             const descriere =c.descriere
             const linkImagine = c.linkImagine
             const id =doc.id
             
            
-            Categorie.push({categorie, descriere, linkImagine, id})
+            Categorie.push({numeCategorie, descriere, linkImagine, id})
            
             
         })
@@ -44,9 +44,9 @@ export const aducCategorie = () => dispatch => {
 
 }
 
-// export const deleteProgram = (id) => dispatch => {
-//     return firestore.collection('program').doc(id).delete()
-//     .then(()=> dispatch({type: ActionTypes.DELETE_PROGRAM, payload: id}))
-//     .catch(error => {dispatch({type:ActionTypes.FAIL, payload:error})})
+export const deleteCategorie = (id) => dispatch => {
+    return firestore.collection('categorieAtelier').doc(id).delete()
+    .then(()=> dispatch({type: ActionTypes.DELETE_CATEGORIE, payload: id}))
+    .catch(error => {dispatch({type:ActionTypes.FAIL, payload:error})})
 
-// }
+}

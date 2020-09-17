@@ -9,18 +9,18 @@ const NewCategory = (props) => (
   <React.Fragment>
     <h1>Anywhere in your app!</h1>
     <Formik
-      initialValues={{ categorie: '', descriere:'', linkImagine: ''}}
+      initialValues={{ numeCategorie: '', descriere:'', linkImagine: ''}}
       validate={values => {
         const errors = {};
-        if (!values.categorie) {
-          errors.categorie = 'Required';
+        if (!values.numeCategorie) {
+          errors.numeCategorie = 'Required';
         } 
         return errors;
       }}
       onSubmit={(values, { setSubmitting }) => {
         setTimeout(() => {
           props.adaugaCategorie(values)  
-          alert(JSON.stringify(values, null, 2));
+        //   alert(JSON.stringify(values, null, 2));
           setSubmitting(false);
         }, 400);
       }}
@@ -37,16 +37,16 @@ const NewCategory = (props) => (
       }) => (
         <Form onSubmit={handleSubmit}>
         <Form.Field>
-          <label htmlFor="categorie">Categorie nouă</label>
+          <label htmlFor="numeCategorie">Categorie nouă</label>
           <input
             type="text"
-            name="categorie"
+            name="numeCategorie"
             onChange={handleChange}
             onBlur={handleBlur}
-            value={values.categorie}
+            value={values.numeCategorie}
           />
           </Form.Field>
-          {errors.categorie && touched.categorie && errors.categorie}
+          {errors.numeCategorie && touched.numeCategorie && errors.numeCategorie}
 
           <Form.Field>
           <label htmlFor="descriere">Descriere</label>
