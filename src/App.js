@@ -9,7 +9,7 @@ import {userRedux} from './redux/actions/AuthActions'
 import history from './history'
 import Cursuri from './components/Cursuri/Cursuri'
 import Evenimente from './components/Evenimente/Evenimente'
-import Atelier from './components/Atelier/Atelier'
+import Atelier from './pages/Atelier/Home/Atelier'
 import {auth} from './firebase/firebase'
 import SingIn from './components/SingIn';
 import SingUp from './components/SingUp';
@@ -26,6 +26,7 @@ import GalerieVideo from './components/Cursuri/ComponenteCursuri/GalerieVideo'
 import Locatie from './components/Cursuri/ComponenteCursuri/Locatie';
 import Gal from './components/Evenimente/ComponenteEv/Gal';
 import Page404 from './pages/Page404/Page404'
+import AdminPanel from './pages/Atelier/AdminPanel/AdminPanel';
 
 class App extends React.Component {
   componentDidMount() {
@@ -72,6 +73,9 @@ updateDimensions = () => {
                       <Route exact path ="/galerievideo" component={GalerieVideo} />
                       <Route exact path ="/locatie" component={Locatie} />
                       <Route exact path ="/galerieevenimente" component={Gal} />
+                      
+                      <Route exact path ="/atelierAdminPanel" component={AdminPanel} />
+
                       <Route path="*" component={Page404}/>
                    </Switch>
               </div>

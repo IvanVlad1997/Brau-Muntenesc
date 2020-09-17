@@ -1,8 +1,12 @@
 import React, { Component } from 'react'
 import { Menu } from 'semantic-ui-react'
 import {Link} from 'react-router-dom'
+import {connect} from 'react-redux'
 
-export default class MenuExampleInverted extends Component {
+ class MenuExampleInverted extends Component {
+    constructor(props) {
+        super(props)
+    }
   state = { activeItem: 'home' }
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
@@ -19,13 +23,21 @@ export default class MenuExampleInverted extends Component {
           onClick={this.handleItemClick}
         />
         </Link>
-        <Link to ="/">
-        <Menu.Item
-          name='messages'
-          active={activeItem === 'messages'}
-          onClick={this.handleItemClick}
-        />
-        </Link>
+       
+       
+        {
+           this.props.auth.email === "braumuntenesc@gmail.com"
+           ? 
+           <Link to ="/atelierAdminPanel">
+           <Menu.Item
+           name='AdminPanel'
+           active={activeItem === 'AdminPanel'}
+           onClick={this.handleItemClick}
+             />           
+          </Link>
+        : null
+        
+        }
         <Link to ="/">
         <Menu.Item
           name='friends'
@@ -37,3 +49,13 @@ export default class MenuExampleInverted extends Component {
     )
   }
 }
+
+
+const mapStateToProps = (state) => {
+    return {
+       auth: state.auth
+    }
+}
+
+
+export default connect(mapStateToProps)(MenuExampleInverted)
