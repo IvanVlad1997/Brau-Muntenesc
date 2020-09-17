@@ -1,27 +1,28 @@
 import {compose, createStore, combineReducers, applyMiddleware} from 'redux'
-import {AuthUser} from './AuthUser'
+import {AuthUser} from './reducers/AuthUser'
 import thunk from 'redux-thunk'
 import logger from 'redux-logger'
-import error from './error'
-import {Auth} from './user'
+import error from './reducers/error'
+import {Auth} from './reducers/user'
 import { createForms } from 'react-redux-form';
-import {UserDetails} from './userDetails'
-import {Profiles} from './listProfiles'
-import {plata} from './plata'
-import {Plati} from './Plateste'
-import {programAdauga} from './programAdaugare'
-import {program} from './program'
-import {preturiAdauga } from './adaugaPreturi'
-import { preturi } from './preturi'
-import {videoYT} from './videoYT'
-import {videoYTadauga} from './videoYTadauga'
-import {Galerie} from './galerie'
-import {GalerieVideo} from './galerieVideo'
-import {galerieVideo} from './adaugaGalerieVideo'
-import {Dimensiuni} from './dimensions'
-import {GalerieVideoEvenimente} from './galerieEvenimente'
-import {contactEveniment} from './contactEvenimente'
-import {alegeGrupa} from './AlegeGrupa'
+import {UserDetails} from './reducers/userDetails'
+import {Profiles} from './reducers/listProfiles'
+import {plata} from './reducers/plata'
+import {Plati} from './reducers/Plateste'
+import {programAdauga} from './reducers/programAdaugare'
+import {program} from './reducers/program'
+import {preturiAdauga } from './reducers/adaugaPreturi'
+import { preturi } from './reducers/preturi'
+import {videoYT} from './reducers/videoYT'
+import {videoYTadauga} from './reducers/videoYTadauga'
+import {Galerie} from './reducers/galerie'
+import {GalerieVideo} from './reducers/galerieVideo'
+import {galerieVideo} from './reducers/adaugaGalerieVideo'
+import {Dimensiuni} from './reducers/dimensions'
+import {GalerieVideoEvenimente} from './reducers/galerieEvenimente'
+import {contactEveniment} from './reducers/contactEvenimente'
+import {alegeGrupa} from './reducers/AlegeGrupa'
+import {CategorieReducer} from './CategorieAtelier/CategorieAtelierReducer'
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
@@ -40,6 +41,7 @@ export const ConfigureStore = () => {
             GalerieVideo: GalerieVideo,
             dimensiuni: Dimensiuni,
             GalerieVideoEvenimente: GalerieVideoEvenimente,
+            CategorieReducer,
             
 
             ...createForms({

@@ -12,7 +12,7 @@ const DropdownExampleHeader = () => (
     className='icon'
   >
     <Dropdown.Menu>
-      <Link className="ui button   fluid" to = "/"><Dropdown.Item>Important</Dropdown.Item></Link>
+      <Link className="ui button   fluid" to = "/atelierAdminPanel"><Dropdown.Item>Admin panel</Dropdown.Item></Link>
       <Link className="ui button  fluid" to = "/"><Dropdown.Item>Important</Dropdown.Item></Link>
       <Link className="ui button  fluid" to = "/"><Dropdown.Item>Important</Dropdown.Item></Link>
       

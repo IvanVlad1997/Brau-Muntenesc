@@ -27,6 +27,7 @@ import Locatie from './components/Cursuri/ComponenteCursuri/Locatie';
 import Gal from './components/Evenimente/ComponenteEv/Gal';
 import Page404 from './pages/Page404/Page404'
 import AdminPanel from './pages/Atelier/AdminPanel/AdminPanel';
+import NewCategory from './pages/Atelier/NewCategory/NewCategory'
 
 class App extends React.Component {
   componentDidMount() {
@@ -72,10 +73,9 @@ updateDimensions = () => {
                       <Route exact path ="/contact" component={Contact} />
                       <Route exact path ="/galerievideo" component={GalerieVideo} />
                       <Route exact path ="/locatie" component={Locatie} />
-                      <Route exact path ="/galerieevenimente" component={Gal} />
-                      
+                      <Route exact path ="/galerieevenimente" component={Gal} />   
                       <Route exact path ="/atelierAdminPanel" component={AdminPanel} />
-
+                      <Route exact path ="/newCategory" component={NewCategory} />
                       <Route path="*" component={Page404}/>
                    </Switch>
               </div>
