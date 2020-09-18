@@ -9,13 +9,16 @@ export const adaugaCategorie = (p) => (dispatch) => {
        linkImagine: p.linkImagine
 
     })
-    .then(()=> {
+    .then((r)=> {
             const date = {}
             date.numeCategorie = p.numeCategorie
             date.descriere = p.descriere
             date.linkImagine = p.linkImagine
+            date.id= r.id
             dispatch({type: ActionTypes.ADAUGA_CATEGORIE, payload: date})
     })
+    .then (() => history.push('/'))
+    .catch(error => {dispatch({type:ActionTypes.FAIL, payload:error})})
 }
 
 
@@ -40,6 +43,7 @@ export const aducCategorie = () => dispatch => {
         return Categorie
     })
     .then (data => dispatch({type:ActionTypes.FETCH_CATEGORIE, payload: data}))
+    
     .catch(error => {dispatch({type:ActionTypes.FAIL, payload:error})})
 
 }

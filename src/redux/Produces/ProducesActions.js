@@ -22,6 +22,8 @@ export const adaugaProdus = (p) => (dispatch) => {
             date.pre = p.pret
             dispatch({type: ActionTypes.ADAUGA_PRODUS, payload: date})
     })
+    .then (() => history.push('/'))
+    .catch(error => {dispatch({type:ActionTypes.FAIL, payload:error})})
 }
 
 
