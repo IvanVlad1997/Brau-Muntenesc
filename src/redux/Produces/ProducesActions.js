@@ -2,51 +2,60 @@ import * as ActionTypes from './ProducesConstants'
 import { auth, firestore, fireauth, firebasestore, storage } from '../../firebase/firebase'
 import history from '../../history'
 
-export const adaugaCategorie = (p) => (dispatch) => {
+export const adaugaProdus = (p) => (dispatch) => {
     return firestore.collection('produs').add({
-       numeCategorie: p.numeCategorie,
+       categorie: p.categorie,
        descriere: p.descriere,
-       linkImagine: p.linkImagine
+       linkImagine: p.linkImagine,
+       culoare: p.culoare,
+       marime: p.marime,
+       pret: p.pret
 
     })
     .then(()=> {
             const date = {}
-            date.numeCategorie = p.numeCategorie
+            date.categorie = p.categorie
             date.descriere = p.descriere
             date.linkImagine = p.linkImagine
-            dispatch({type: ActionTypes.ADAUGA_CATEGORIE, payload: date})
+            date.culoare = p.culoare
+            date.marime = p.marime
+            date.pre = p.pret
+            dispatch({type: ActionTypes.ADAUGA_PRODUS, payload: date})
     })
 }
 
 
 
-export const aducCategorie = () => dispatch => {
-    return firestore.collection('categorieAtelier').get()
+export const aducProduse = () => dispatch => {
+    return firestore.collection('produs').get()
     .then(snapshot => {
         
-        let Categorie = [];
+        let produse = [];
         snapshot.forEach(doc => {
             const c = doc.data()
-            const numeCategorie = c.numeCategorie
+            const categorie = c.categorie
             const descriere =c.descriere
             const linkImagine = c.linkImagine
+            const marime = c.marime
+            const pret = c.pret
+            const culoare = c.culoare
             const id =doc.id
             
            
-            Categorie.push({numeCategorie, descriere, linkImagine, id})
+            produse.push({categorie, descriere, linkImagine, culoare, pret, marime,  id})
            
             
         })
-        return Categorie
+        return produse
     })
-    .then (data => dispatch({type:ActionTypes.FETCH_CATEGORIE, payload: data}))
+    .then (data => dispatch({type:ActionTypes.FETCH_PRODUS, payload: data}))
     .catch(error => {dispatch({type:ActionTypes.FAIL, payload:error})})
 
 }
 
-export const deleteCategorie = (id) => dispatch => {
-    return firestore.collection('categorieAtelier').doc(id).delete()
-    .then(()=> dispatch({type: ActionTypes.DELETE_CATEGORIE, payload: id}))
+export const deleteProdus = (id) => dispatch => {
+    return firestore.collection('produs').doc(id).delete()
+    .then(()=> dispatch({type: ActionTypes.DELETE_PRODUS, payload: id}))
     .catch(error => {dispatch({type:ActionTypes.FAIL, payload:error})})
 
 }

@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import { Formik, Field } from 'formik';
 import {Form, Button} from 'semantic-ui-react'
 import { Link } from 'react-router-dom';
-// import {adaugaCategorie} from '../../../redux/CategorieAtelier/CategorieAtelierActions'
+import {adaugaProdus} from '../../../redux/Produces/ProducesActions'
 import {connect} from 'react-redux'
 import { aducCategorie } from '../../../redux/CategorieAtelier/CategorieAtelierActions';
 import Loading from '../../../components/Loading';
@@ -28,7 +28,7 @@ if (props.categorii.categorie !=='')  return (
       }}
       onSubmit={(values, { setSubmitting }) => {
         setTimeout(() => {
-          // props.adaugaCategorie(values)  
+           props.adaugaProdus(values)  
           alert(JSON.stringify(values, null, 2));
           setSubmitting(false);
         }, 400);
@@ -136,4 +136,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps, {aducCategorie})(NewCategory);
+export default connect(mapStateToProps, {aducCategorie, adaugaProdus})(NewCategory);

@@ -1,21 +1,23 @@
 
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Link } from 'react-router-dom';
 
-import { connect } from 'react-redux';
+import Layout from '../../../components/Atelier/Layout/Layout';
+import ProductList from '../../../components/Atelier/ProductList/ProductList'
 
 
 const Category = (props) => {
-    return(
-      <div>sad</div>
-    );
+  
+    
+    return (
+        <Layout>
+            
+            <ProductList id = {props.match.params.id} />
+        </Layout>
+    )
 }
 
-const mapStateToProps = (state) => {
-    return {
-       
-    }
-}
 
 
-export default connect(mapStateToProps)(Category);
+
+export default (Category);

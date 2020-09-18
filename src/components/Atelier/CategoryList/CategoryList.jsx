@@ -15,7 +15,7 @@ const CategoryList = (props) => {
     
     
     if (props.listaCategorii.categorie !== '' )
-      return  props.listaCategorii.map((c)=> {return <CategoryItem categorie = {c}  key={c.id}/>})
+      return  props.listaCategorii.map((c, index)=> {return <CategoryItem categorie = {c}  key={index}/>})
     return <Loading />
     
 }

@@ -1,19 +1,19 @@
 import * as ActionTypes from './ProducesConstants'
 import _ from 'lodash'
 
-export const CategorieReducer = (state = {
-    categorie: ''
+export const ProdusReducer = (state = {
+    produs: ''
   
 }, action) => {
     switch (action.type) {
                 
-        case ActionTypes.ADAUGA_CATEGORIE:
-            return {...state, categorie:[...state.categorie, action.payload]}
+        case ActionTypes.ADAUGA_PRODUS:
+            return {...state, produs:[...state.produs, action.payload]}
 
-       case ActionTypes.FETCH_CATEGORIE:
+       case ActionTypes.FETCH_PRODUS:
              return { ..._.mapKeys(action.payload, 'id')}
 
-        case ActionTypes.DELETE_CATEGORIE:
+        case ActionTypes.DELETE_PRODUS:
              return _.omit(state, action.payload)
 
         default:

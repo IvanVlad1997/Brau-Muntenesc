@@ -23,6 +23,7 @@ import {GalerieVideoEvenimente} from './reducers/galerieEvenimente'
 import {contactEveniment} from './reducers/contactEvenimente'
 import {alegeGrupa} from './reducers/AlegeGrupa'
 import {CategorieReducer} from './CategorieAtelier/CategorieAtelierReducer'
+import {ProdusReducer} from './Produces/ProducesReducer'
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
@@ -42,6 +43,7 @@ export const ConfigureStore = () => {
             dimensiuni: Dimensiuni,
             GalerieVideoEvenimente: GalerieVideoEvenimente,
             CategorieReducer,
+            ProdusReducer,
             
 
             ...createForms({
