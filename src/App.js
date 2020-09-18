@@ -30,6 +30,7 @@ import AdminPanel from './pages/Atelier/AdminPanel/AdminPanel';
 import NewCategory from './pages/Atelier/NewCategory/NewCategory'
 import Category from './pages/Atelier/Category/Category';
 import NewProduct from './pages/Atelier/NewProduct/NewProduct'
+import SingleProduct from './pages/Atelier/SingleProduct/SingleProduct'
 
 class App extends React.Component {
   componentDidMount() {
@@ -80,6 +81,7 @@ updateDimensions = () => {
                       <Route exact path ="/newCategory" component={NewCategory} />
                       <Route exact path ="/newProduct" component={NewProduct} />
                       <Route exact path ="/category/:id" component={Category} />
+                      <Route exact path ="/product/:id" component={SingleProduct} />
                       <Route path="*" component={Page404}/>
                    </Switch>
               </div>

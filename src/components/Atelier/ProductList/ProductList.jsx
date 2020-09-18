@@ -5,7 +5,7 @@ import {aducProduse} from '../../../redux/Produces/ProducesActions'
 import {aducCategorie} from '../../../redux/CategorieAtelier/CategorieAtelierActions'
 import { connect } from 'react-redux';
 import Layout from '../../../components/Atelier/Layout/Layout';
-import ProductList from '../../../components/Atelier/ProductList/ProductList'
+import ProductItem from '../ProductItem/ProductItem'
 
 
 const Category = (props) => {
@@ -18,13 +18,13 @@ const Category = (props) => {
     console.log(props)  
     if (props.produse[0] !== '' ) produse = props.produse.map((produs, index) => {
          if (produs.categorie === props.categorie.numeCategorie)
-         return <div key ={index}>{produs.categorie}</div>
+         return <div key ={index}><ProductItem produs={produs} /></div>
       })
     
     return (
-        <div>
+        <React.Fragment>
             {produse}
-        </div>
+        </React.Fragment>
           
            
         

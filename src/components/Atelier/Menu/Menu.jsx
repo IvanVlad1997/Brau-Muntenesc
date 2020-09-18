@@ -38,13 +38,7 @@ import {connect} from 'react-redux'
         : null
         
         }
-        <Link to ="/">
-        <Menu.Item
-          name='friends'
-          active={activeItem === 'friends'}
-          onClick={this.handleItemClick}
-        />
-        </Link>
+       
       </Menu>
     )
   }
