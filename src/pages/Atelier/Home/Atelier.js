@@ -6,14 +6,13 @@ class Atelier extends React.Component {
     render() {
         return(
             <Layout>
-                <Grid centered>
+                <Grid >
                     <Grid.Row>
-                        <Grid.Column width={2}>
-
+                        <Grid.Column width={2}></Grid.Column>
+                        <Grid.Column   width={12} >
+                             <CategoryList  />    
                         </Grid.Column>
-                        <Grid.Column width={12} >
-                             <CategoryList />    
-                        </Grid.Column>
+                        <Grid.Column width={2}></Grid.Column>
                     </Grid.Row>
                 </Grid>
                
