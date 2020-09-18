@@ -13,7 +13,7 @@ const AdminPanel = (props) => {
     return(
      <React.Fragment>
          <Link className="ui button" to="/newCategory">Creează o nouă categorie</Link>
-         <Button>Adaugă un produs</Button>
+         <Link className="ui button" to="/newProduct">Creează un produs nou</Link>
          <Link className="ui primary button" to="/Atelier">Înapoi</Link>
      </React.Fragment>
     );

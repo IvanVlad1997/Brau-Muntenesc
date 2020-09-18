@@ -28,6 +28,8 @@ import Gal from './components/Evenimente/ComponenteEv/Gal';
 import Page404 from './pages/Page404/Page404'
 import AdminPanel from './pages/Atelier/AdminPanel/AdminPanel';
 import NewCategory from './pages/Atelier/NewCategory/NewCategory'
+import Category from './pages/Atelier/Category/Category';
+import NewProduct from './pages/Atelier/NewProduct/NewProduct'
 
 class App extends React.Component {
   componentDidMount() {
@@ -76,6 +78,8 @@ updateDimensions = () => {
                       <Route exact path ="/galerieevenimente" component={Gal} />   
                       <Route exact path ="/atelierAdminPanel" component={AdminPanel} />
                       <Route exact path ="/newCategory" component={NewCategory} />
+                      <Route exact path ="/newProduct" component={NewProduct} />
+                      <Route exact path ="/category/:id" component={Category} />
                       <Route path="*" component={Page404}/>
                    </Switch>
               </div>

@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom'
 const CategoryItem = (props) =>{
     const {categorie} = props
     return (
-    <Link to ="/">
+    <Link to ={`/category/${categorie.id}`}>
     <Card>
     <Image src={categorie.linkImagine} wrapped ui={true} />
     <Card.Content>
