@@ -16,28 +16,28 @@ import {connect} from 'react-redux'
 
     return (
       <Menu inverted>
-        <Link to ="/">
-        <Menu.Item
-          name='home'
-          active={activeItem === 'home'}
-          onClick={this.handleItemClick}
+         <Link  to ="/">
+        <Menu.Item 
+        name='home'
+        // active={activeItem === 'home'}
         />
-        </Link>
+         </Link>
+      
        
-       
-        {
+         {
            this.props.auth.email === "braumuntenesc@gmail.com"
            ? 
            <Link to ="/atelierAdminPanel">
            <Menu.Item
            name='AdminPanel'
            active={activeItem === 'AdminPanel'}
-           onClick={this.handleItemClick}
+           
              />           
           </Link>
         : null
         
         }
+       
        
       </Menu>
     )

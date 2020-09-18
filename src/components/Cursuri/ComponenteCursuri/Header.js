@@ -24,7 +24,7 @@ class Header extends React.Component {
                     <Menu.Item position='right'>
                     <Link to={"/PanouCursanti"} >
                         <Button color="red">Panou Cursanti</Button>
-                        </Link>
+                    </Link>
                       
                     </Menu.Item>
                     <Menu.Item >
