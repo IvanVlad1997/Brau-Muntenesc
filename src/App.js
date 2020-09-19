@@ -33,6 +33,7 @@ import NewProduct from './pages/Atelier/NewProduct/NewProduct'
 import SingleProduct from './pages/Atelier/SingleProduct/SingleProduct'
 import PoliticaConfidentialitate from './pages/PoliticaConfidentialitate/PoliticaConfidentialitate';
 import Cookies from 'universal-cookie';
+import {Button} from 'semantic-ui-react'
 
 
 class App extends React.Component {
@@ -59,6 +60,10 @@ updateDimensions = () => {
 
 };
 
+  refreshPage() {
+  window.location.reload(false);
+}
+
  Functie (){
    console.log('asdadwadawdwadawdaw')
   const cookies = new Cookies();
@@ -71,7 +76,9 @@ updateDimensions = () => {
    
       Continuând să navigați, acceptați 
       politica de confidențialitate. Apăsați aici pentru a fi redirecționați pe pagina Politicii de confidențialitate.
-      <br /><Link to="/politicaconfidentialitate">Politica de confidentialitate</Link> </div>
+      <br /><Link to="/politicaconfidentialitate">Politica de confidentialitate</Link> 
+      <Button onClick={this.refreshPage}>Am înțeles</Button>
+      </div>
      
      
 
