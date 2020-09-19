@@ -1,6 +1,6 @@
 import React from 'react' 
 import StartPageCircle from './StartPageCircle'
-import {Grid} from 'semantic-ui-react'
+import {Grid, Image} from 'semantic-ui-react'
 import {connect} from 'react-redux'
 
 
@@ -18,7 +18,9 @@ class Main extends React.Component{
         return (
           <Grid style ={{paddingTop: 20}} className="ui centered ">
             <Grid.Row>
-              <Grid.Column width={3}></Grid.Column>
+              <Grid.Column width={3}>
+              
+              </Grid.Column>
               <Grid.Column width={10}  className="ui container center aligned" stretched>
               <StartPageCircle image1 ='https://scontent.fsbz1-1.fna.fbcdn.net/v/t1.0-9/75456811_540505919858198_5593544619221581824_o.jpg?_nc_cat=111&_nc_sid=730e14&_nc_eui2=AeFNwZZUl-oV5jlPpW4ILXoy3rml9uIgKQDeuaX24iApAF1K81JWd45etFKwCNwdaNmbCiagEt8OSgP_nJQENBzu&_nc_ohc=jt3I92HW-OYAX_gIw2E&_nc_ht=scontent.fsbz1-1.fna&oh=a38deb85fc770bc891cd07520dd9977c&oe=5F65BB1D' 
                                

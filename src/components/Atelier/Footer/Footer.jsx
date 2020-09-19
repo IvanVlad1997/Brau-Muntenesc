@@ -16,34 +16,31 @@ function Footer() {
                    
                             <Grid.Column width={4}>
                             <h3 >Link-uri rapide:</h3>
-                                <Link to='/about'>Despre</Link>
+                                {/* <Link to='/about'>TERMENI SI CONDITII https://www.sinsay.com/ro/ro/terms</Link> */}
                                 <br />
-                                <Link to='/terms'>Termeni și condiții</Link>
+                                <Link to='/politicaconfidentialitate'>Politica de confidențialitate</Link>
                             </Grid.Column>
 
                             <Grid.Column width={4}>
-                            <h3 >Contactează-mă:</h3>
+                            <h3 >Contactează-ne:</h3>
                                
-                                    <a href="mailto:ivanvlad97@yahoo.ro">
+                                    <a href="mailto:braumuntenesc@gmail.com">
                                     
-                                        ivanvlad97@yahoo.ro
+                                        braumuntenesc@gmail.com
                                     </a>
                                 <br />
-                               +40761532885
+                               +4075/1105.873
                             </Grid.Column>
 
                             <Grid.Column width={4}>
-                            <h3 >Contactează-mă:</h3>
+                            <h3 >Link-uri:</h3>
                                
-                                    <a href="https://github.com/IvanVlad1997">
+                                    <a href="https://www.facebook.com/BrauMuntenesc">
                                     
-                                        IvanVlad1997
+                                        Facebook
                                     </a>
                                
-                                    <a href="https://www.linkedin.com/in/vlad-gabriel-ivan-6b679b1b6/">
-                                    
-                                        IvanVlad
-                                    </a>
+                                   
                               
                             </Grid.Column>
                             <Grid.Column width={1}></Grid.Column>

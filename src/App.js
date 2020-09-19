@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Main from './components/Main'
-import {Router, Route,Switch } from 'react-router-dom'
+import {Router, Route,Switch, Link } from 'react-router-dom'
 import {connect} from 'react-redux'
 
 import {schimbaDimensiuni} from './redux/actions/actiuni'
@@ -31,9 +31,17 @@ import NewCategory from './pages/Atelier/NewCategory/NewCategory'
 import Category from './pages/Atelier/Category/Category';
 import NewProduct from './pages/Atelier/NewProduct/NewProduct'
 import SingleProduct from './pages/Atelier/SingleProduct/SingleProduct'
+import PoliticaConfidentialitate from './pages/PoliticaConfidentialitate/PoliticaConfidentialitate';
+import Cookies from 'universal-cookie';
+
 
 class App extends React.Component {
+
   componentDidMount() {
+
+   
+
+
     auth.onAuthStateChanged((user) => {
      if (user) {this.props.userRedux(user.uid)} 
         else {
@@ -48,16 +56,43 @@ componentWillUnmount() {
 updateDimensions = () => {
   this.props.schimbaDimensiuni (window.innerWidth, window.innerHeight );
 
+
 };
+
+ Functie (){
+   console.log('asdadwadawdwadawdaw')
+  const cookies = new Cookies();
+  if (cookies.get('GDPR') === undefined) 
+  {cookies.set('GDPR', 'Vazut', { path: '/' })
+  alert("Continuând să navigați, acceptați politica de confidențialitate. Link: http://localhost:3000/politicaconfidentialitate")
+    return (
+
+      <div style={{background:"gray", height:100, color: "black", pading: 40, textAlign: "center"}}>
+   
+      Continuând să navigați, acceptați 
+      politica de confidențialitate. Apăsați aici pentru a fi redirecționați pe pagina Politicii de confidențialitate.
+      <br /><Link to="/politicaconfidentialitate">Politica de confidentialitate</Link> </div>
+     
+     
+
+      )
+}
+}
+
+
+
   render() {
     console.log(this.props.dimensiuni)
   return (
 
    
           
-          <React.Fragment>       
+          <React.Fragment>   
+              
           <Router history={history}>
+          {this.Functie()}  
               <div>
+               
                   <Switch>
                       <Route path="/" exact component={Main} /> 
                       <Route exact path="/Cursuri" component={Cursuri} />
@@ -82,6 +117,7 @@ updateDimensions = () => {
                       <Route exact path ="/newProduct" component={NewProduct} />
                       <Route exact path ="/category/:id" component={Category} />
                       <Route exact path ="/product/:id" component={SingleProduct} />
+                      <Route exact path ="/politicaconfidentialitate" component={PoliticaConfidentialitate} />
                       <Route path="*" component={Page404}/>
                    </Switch>
               </div>
