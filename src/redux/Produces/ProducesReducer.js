@@ -8,7 +8,7 @@ export const ProdusReducer = (state = {
     switch (action.type) {
                 
         case ActionTypes.ADAUGA_PRODUS:
-            return {...state, produs:[...state.produs, action.payload]}
+            return {...state, produs:[ action.payload]}
 
        case ActionTypes.FETCH_PRODUS:
              return { ..._.mapKeys(action.payload, 'id')}

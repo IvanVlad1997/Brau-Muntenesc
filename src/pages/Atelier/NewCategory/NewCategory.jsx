@@ -7,7 +7,7 @@ import {connect} from 'react-redux'
 
 const NewCategory = (props) => (
   <React.Fragment>
-    <h1>Anywhere in your app!</h1>
+    <h1>Adaugă o categorie</h1>
     <Formik
       initialValues={{ numeCategorie: '', descriere:'', linkImagine: ''}}
       validate={values => {

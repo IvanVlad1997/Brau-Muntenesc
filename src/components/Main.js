@@ -16,19 +16,20 @@ class Main extends React.Component{
 
       if (this.props.dimensiuni.width < 1200)
         return (
-          <Grid style ={{paddingTop: 20}} centered>
+          <Grid style ={{paddingTop: 20}} className="ui centered ">
             <Grid.Row>
               <Grid.Column width={3}></Grid.Column>
-              <Grid.Column width={10}>
+              <Grid.Column width={10}  className="ui container center aligned" stretched>
               <StartPageCircle image1 ='https://scontent.fsbz1-1.fna.fbcdn.net/v/t1.0-9/75456811_540505919858198_5593544619221581824_o.jpg?_nc_cat=111&_nc_sid=730e14&_nc_eui2=AeFNwZZUl-oV5jlPpW4ILXoy3rml9uIgKQDeuaX24iApAF1K81JWd45etFKwCNwdaNmbCiagEt8OSgP_nJQENBzu&_nc_ohc=jt3I92HW-OYAX_gIw2E&_nc_ht=scontent.fsbz1-1.fna&oh=a38deb85fc770bc891cd07520dd9977c&oe=5F65BB1D' 
                                
                                 title = 'Cursuri'
                                 link = '/Cursuri'/>  
               </Grid.Column>
+            
             </Grid.Row>
             <Grid.Row>
-            <Grid.Column width={3}></Grid.Column>
-              <Grid.Column width={10}>
+            <Grid.Column width={3} ></Grid.Column>
+              <Grid.Column width={10} stretched>
               <StartPageCircle image1 ='https://scontent.fsbz1-2.fna.fbcdn.net/v/t1.0-9/107604021_298272478029834_5145935540205798847_o.jpg?_nc_cat=100&_nc_sid=730e14&_nc_eui2=AeGx78onwiEu9-wHPVok7hzvIIlp24ZXlS8giWnbhleVLzRXFrkSRIs8-w9zA286LAtnRPJlYf_YEvvgoTLNcBSU&_nc_ohc=1yZNK-OBqiYAX_JPJ3J&_nc_ht=scontent.fsbz1-2.fna&oh=d4b6cf39248ffee121ebff7f1a728c8a&oe=5F66FD1A' 
                             
                             title = 'Atelier'
@@ -37,7 +38,7 @@ class Main extends React.Component{
             </Grid.Row>
             <Grid.Row>
             <Grid.Column width={3}></Grid.Column>
-              <Grid.Column width={10}>
+              <Grid.Column width={10} stretched>
               <StartPageCircle image1 ='https://scontent.fsbz1-1.fna.fbcdn.net/v/t1.0-9/74605478_535940563648067_1047365106985336832_o.jpg?_nc_cat=111&_nc_sid=730e14&_nc_eui2=AeF3uiJsshEu86c_Zl2V98sEinuNpoe6RiuKe42mh7pGK8_q8fXBArRzLR6LhYFBG0TxCga8RpoSEg0dXuywCmCB&_nc_ohc=CMJ5i3vXDsgAX8rGGsq&_nc_ht=scontent.fsbz1-1.fna&oh=d3032ecdbcd0f32d5fd7d20e8ee5f222&oe=5F64DD66' 
                             
                             title = 'Evenimente'

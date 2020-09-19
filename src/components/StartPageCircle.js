@@ -10,7 +10,8 @@ if (props.dimensiuni.width <1200)
 return (
   <Container>
   <Link to={props.link}    >  
- <Card >
+ 
+  <Card style={{justifyContent: "center"}}>
  
     <Image size='small'  src={props.image1} wrapped ui={false} />
     <Card.Content >
@@ -22,6 +23,7 @@ return (
         
        
   </Card>
+
       
     
   </Link>
