@@ -16,12 +16,9 @@ import {connect} from 'react-redux'
 
     return (
       <Menu inverted>
-         <Link  to ="/">
-        <Menu.Item 
-        name='home'
-        // active={activeItem === 'home'}
-        />
-         </Link>
+         <Link  to ="/"><Menu.Item  name='Brâu Muntenesc' /> </Link>
+         <Link  to ="/atelier"><Menu.Item  name='home' /> </Link>
+        
       
        
          {

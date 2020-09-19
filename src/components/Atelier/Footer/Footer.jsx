@@ -1,46 +1,70 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Grid } from 'semantic-ui-react';
 import './Footer.css';
 
 function Footer() {
     return(
-        <footer className="pt-3 mt-3 bg-light">
-            <div className="container-fluid container-min-max-width d-flex justify-content-between">
-                <div className="footer-group d-flex flex-column">
-                    <h3 className="h5">Link-uri rapide:</h3>
-                    <Link to='/about'>Despre</Link>
-                    <Link to='/terms'>Termeni și condiții</Link>
-                </div>
-                <div className="footer-group">
-                    <h3 className="h5">Contactează-mă:</h3>
-                    <p className="m-0">
-                        <a href="mailto:ivanvlad97@yahoo.ro">
-                           
-                            ivanvlad97@yahoo.ro
-                        </a>
-                    </p>
-                    <p className="m-0">+40761532885</p>
-                </div>
-                <div className="footer-group">
-                    <h3 className="h5">Contactează-mă:</h3>
-                    <p className="m-0">
-                        <a href="https://github.com/IvanVlad1997">
-                          
-                            IvanVlad1997
-                        </a>
-                    </p>
-                    <p className="m-0">
-                        <a href="https://www.linkedin.com/in/vlad-gabriel-ivan-6b679b1b6/">
-                         
-                            IvanVlad
-                        </a>
-                    </p>
-                </div>
-            </div>
-            <div className="text-center py-3">
-                &copy; Ivan Vlad, 2020
-            </div>
-        </footer>
+        <Grid  stackable style={{textAlign:"center"}} >
+            <Grid.Row > 
+                    <Grid.Column width={2}></Grid.Column>
+                    <Grid.Column width={14} >
+                    <Grid  stackable >
+                    <Grid.Row  >
+                        <Grid.Column width={1}></Grid.Column>
+                        
+                   
+                            <Grid.Column width={4}>
+                            <h3 >Link-uri rapide:</h3>
+                                <Link to='/about'>Despre</Link>
+                                <br />
+                                <Link to='/terms'>Termeni și condiții</Link>
+                            </Grid.Column>
+
+                            <Grid.Column width={4}>
+                            <h3 >Contactează-mă:</h3>
+                               
+                                    <a href="mailto:ivanvlad97@yahoo.ro">
+                                    
+                                        ivanvlad97@yahoo.ro
+                                    </a>
+                                <br />
+                               +40761532885
+                            </Grid.Column>
+
+                            <Grid.Column width={4}>
+                            <h3 >Contactează-mă:</h3>
+                               
+                                    <a href="https://github.com/IvanVlad1997">
+                                    
+                                        IvanVlad1997
+                                    </a>
+                               
+                                    <a href="https://www.linkedin.com/in/vlad-gabriel-ivan-6b679b1b6/">
+                                    
+                                        IvanVlad
+                                    </a>
+                              
+                            </Grid.Column>
+                            <Grid.Column width={1}></Grid.Column>
+
+                        </Grid.Row>
+                       
+                    </Grid>
+
+                    </Grid.Column>
+                   
+            </Grid.Row>
+           
+                  <Grid.Row centered style={{padding:30}}>
+                        <h2>
+                            &copy; Ivan Vlad, 2020
+                        </h2>
+                 </Grid.Row>
+                        
+        </Grid>
+
+       
     );
 }
 

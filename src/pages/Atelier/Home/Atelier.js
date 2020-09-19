@@ -18,7 +18,7 @@ class Atelier extends React.Component {
                                 <Grid.Column> 
                                     <Header  
                                         style = {{paddingTop: 20, paddingBottom: 20}}
-                                        color = "black"
+                                        color = "blue"
                                         textAlign= "center"
                                         size='huge'>Categorii
                                     </Header>

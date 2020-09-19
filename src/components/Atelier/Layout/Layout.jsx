@@ -5,10 +5,12 @@ import './Layout.css';
 
 function Layout(props) {
     return(
-        <div className="layout">
+        <div className="layout" >
             <Header/>
+   
                 { props.children }
-            <Footer/>
+             
+            <Footer />
         </div>
     );
 }

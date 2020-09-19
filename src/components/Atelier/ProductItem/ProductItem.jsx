@@ -1,10 +1,27 @@
 import React from 'react'
-import { Grid } from 'semantic-ui-react'
+import { Grid, Button } from 'semantic-ui-react'
 import {Link} from 'react-router-dom'
 import {LazyLoadImage} from 'react-lazy-load-image-component'
+import {connect} from 'react-redux'
+import {deleteProdus} from '../../../redux/Produces/ProducesActions'
+ 
 
+const ProductItem = (props) =>{
 
-const CategoryItem = (props) =>{
+  const renderDeleteButton = (id) => {
+    if( !props.auth.email) return 
+    else {
+        if (props.auth.email === "braumuntenesc@gmail.com"){
+            return ( 
+                <React.Fragment>
+       
+        <Button onClick = {() => props.deleteProdus(id)} >Delete</Button>
+       
+        </React.Fragment>
+        )
+    }
+}
+  }
     const {produs} = props
     return (
     
@@ -25,8 +42,15 @@ const CategoryItem = (props) =>{
       width={300} />
  
   </Link>
+  <div>
+    {renderDeleteButton(produs.id)}
+  </div>
     
   </Grid.Column>
 )}
 
-export default CategoryItem
+const mapStateToProps = (state) => {
+  return {auth: state.auth}
+}
+
+export default connect(mapStateToProps, {deleteProdus})(ProductItem)
