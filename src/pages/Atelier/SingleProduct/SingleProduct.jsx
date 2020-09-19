@@ -1,10 +1,11 @@
 import React, {useEffect} from 'react'
-import { Card, Icon, Image } from 'semantic-ui-react'
+import { Card, Grid, Icon, Image } from 'semantic-ui-react'
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { aducProduse } from '../../../redux/Produces/ProducesActions';
 import Loading from '../../../components/Loading';
 import Layout from '../../../components/Atelier/Layout/Layout';
+import './SingleProduct.css'
 
 const SingleProduct = (props) =>{
     useEffect(() => {
@@ -15,27 +16,25 @@ const SingleProduct = (props) =>{
     console.log(props)
     
     if(props.produs !==undefined)return (
-        <React.Fragment>
+       
     <Layout>
-    <Card>
-    <Image src={props.produs.linkImagine} wrapped ui={true} />
-    <Card.Content>
-      <Card.Header>{props.produs.descriere}</Card.Header>
-          <Card.Description>
-       Culoare: {props.produs.culoare}
-      </Card.Description>
-      <Card.Description>
-       Preț: {props.produs.pret} Lei
-      </Card.Description>
-      <Card.Description>
-       Mărimi: {props.produs.marime}
-      </Card.Description>
-    </Card.Content>
+      <Grid centered>
+        <Grid.Row> <h2>{props.produs.descriere}</h2></Grid.Row>
+        <Grid.Row><Image  src={props.produs.linkImagine}   style={{maxHeight: 600 }} /></Grid.Row>
+        <Grid.Row> <h5>Culoare: {props.produs.culoare}</h5></Grid.Row>
+        <Grid.Row><h5>Preț: {props.produs.pret} Lei</h5></Grid.Row>
+        <Grid.Row><h5>Mărimi: {props.produs.marime}</h5></Grid.Row>  
+      </Grid>      
+     
+    
+      
+     
+       
+    
  
-  </Card>
   
   </Layout>
-  </React.Fragment>
+
 )
 return <Loading />
 }

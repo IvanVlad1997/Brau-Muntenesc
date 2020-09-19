@@ -10,10 +10,10 @@ const Category = (props) => {
   
     
     return (
-        <Layout>
+      
             
             <ProductList id = {props.match.params.id} />
-        </Layout>
+       
     )
 }
 

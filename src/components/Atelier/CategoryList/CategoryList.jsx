@@ -1,7 +1,7 @@
 
 import React, {useEffect} from 'react';
 import { Link } from 'react-router-dom';
-
+import {Header, Button, Grid} from 'semantic-ui-react'
 import { connect } from 'react-redux';
 import {aducCategorie} from '../../../redux/CategorieAtelier/CategorieAtelierActions'
 import Loading from '../../Loading';
@@ -15,8 +15,14 @@ const CategoryList = (props) => {
     
     
     if (props.listaCategorii.categorie !== '' )
-      return  props.listaCategorii.map((c, index)=> {return <CategoryItem  categorie = {c}  key={index}/>})
-    return <Loading />
+      return  props.listaCategorii.map((c, index)=> {return (
+       
+              <CategoryItem  categorie = {c}  key={index}/>)})
+
+      
+      return <Loading />
+     
+  
     
 }
 

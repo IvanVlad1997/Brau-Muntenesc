@@ -6,6 +6,7 @@ import {aducCategorie} from '../../../redux/CategorieAtelier/CategorieAtelierAct
 import { connect } from 'react-redux';
 import Layout from '../../../components/Atelier/Layout/Layout';
 import ProductItem from '../ProductItem/ProductItem'
+import {Grid, Header} from 'semantic-ui-react'
 
 
 const Category = (props) => {
@@ -22,12 +23,36 @@ const Category = (props) => {
       })
     
     return (
-        <React.Fragment>
-            {produse}
-        </React.Fragment>
-          
-           
-        
+        <Layout>
+        <Grid >
+            <Grid.Row>
+                <Grid.Column width={1}></Grid.Column>
+                <Grid.Column   width={14} >
+                    
+                    <Grid columns='equal' className="center aligned" style = {{paddingTop: 35}} stackable>
+                        <Grid.Row>
+                        <Grid.Column> 
+                            <Header  
+                                style = {{paddingTop: 20, paddingBottom: 20}}
+                                color = "black"
+                                textAlign= "center"
+                                size='huge'>Categorii
+                            </Header>
+                        </Grid.Column>
+                        
+                        
+                        </Grid.Row>
+                        <Grid.Row columns={2} >
+                                  {produse}          
+                        </Grid.Row>
+                    </Grid>
+                   
+                    
+                </Grid.Column>
+                <Grid.Column width={1}></Grid.Column>
+            </Grid.Row>
+        </Grid>    
+    </Layout>
     )
 }
 
