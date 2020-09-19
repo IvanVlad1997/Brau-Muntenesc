@@ -18,7 +18,7 @@ const SegmentExamplePlaceholderGrid = () => (
         <Image 
         circular
         verticalAlign='middle'
-        src = "https://scontent.fsbz1-2.fna.fbcdn.net/v/t1.0-9/118373902_3235592099882137_205267020802511911_o.jpg?_nc_cat=103&_nc_sid=730e14&_nc_eui2=AeGaGmhKqoRYFCgEp1av1CPB8TT48r2zOI3xNPjyvbM4jUpzWV-aJubGaFW8AUmhkNdwvSsWxnL2K-Ojh9jTctcv&_nc_ohc=NfecbCqDsW8AX8gOLTI&_nc_ht=scontent.fsbz1-2.fna&oh=fa2ee24eee021f46e8ba99ef2bf6e74c&oe=5F65BDE2"
+        src = "https://firebasestorage.googleapis.com/v0/b/brau-muntenesc.appspot.com/o/Imagini%20adaugate%20manual%2FAP5A5983.webp?alt=media&token=ce68ec37-b37d-4ee8-afd1-e620df8d6ec6"
         size = "medium" />
           <Header  color="red">
             Ivan Vlad Gabriel
