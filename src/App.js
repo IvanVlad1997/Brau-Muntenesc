@@ -69,15 +69,15 @@ updateDimensions = () => {
   const cookies = new Cookies();
   if (cookies.get('GDPR') === undefined) 
   {cookies.set('GDPR', 'Vazut', { path: '/' })
-  alert("Continuând să navigați, acceptați politica de confidențialitate. Link: http://localhost:3000/politicaconfidentialitate")
+  // alert("Continuând să navigați, acceptați politica de confidențialitate. Link: http://localhost:3000/politicaconfidentialitate")
     return (
 
-      <div style={{background:"gray", height:100, color: "black", pading: 40, textAlign: "center"}}>
-   
-      Continuând să navigați, acceptați 
+      <div style={{background:"gray", height:200, color: "black", pading: 40, textAlign: "center"}}>
+        
+      <h2>Continuând să navigați, acceptați 
       politica de confidențialitate. Apăsați aici pentru a fi redirecționați pe pagina Politicii de confidențialitate.
-      <br /><Link to="/politicaconfidentialitate">Politica de confidentialitate</Link> 
-      <Button onClick={this.refreshPage}>Am înțeles</Button>
+      <br /><Link to="/politicaconfidentialitate">Politica de confidentialitate</Link>  <Button onClick={this.refreshPage}>Am înțeles</Button> </h2>
+    
       </div>
      
      

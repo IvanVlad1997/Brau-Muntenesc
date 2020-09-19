@@ -27,8 +27,6 @@ import {connect} from 'react-redux'
            <Link to ="/atelierAdminPanel">
            <Menu.Item
            name='AdminPanel'
-           active={activeItem === 'AdminPanel'}
-           
              />           
           </Link>
         : null

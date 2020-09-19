@@ -13,10 +13,16 @@ const DropdownExampleHeader = () => (
   >
     <Dropdown.Menu>
     <Link className="ui button  fluid" to = "/"><Dropdown.Item>Brâu Muntenesc</Dropdown.Item></Link>
-      <Link className="ui button   fluid" to = "/atelierAdminPanel"><Dropdown.Item>Admin panel</Dropdown.Item></Link>
+ 
       
       <Link className="ui button  fluid" to = "/atelier"><Dropdown.Item>Home</Dropdown.Item></Link>
-
+      {
+           this.props.auth.email === "braumuntenesc@gmail.com"
+           ? 
+           <Link className="ui button   fluid" to = "/atelierAdminPanel"><Dropdown.Item>Admin panel</Dropdown.Item></Link>
+        : null
+        
+        }
 
     </Dropdown.Menu>
   </Dropdown>
