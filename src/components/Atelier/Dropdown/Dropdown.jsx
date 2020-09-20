@@ -1,8 +1,9 @@
 import React from 'react'
 import { Dropdown } from 'semantic-ui-react'
 import {Link} from 'react-router-dom'
+import { connect } from 'react-redux';
 
-const DropdownExampleHeader = () => (
+const DropdownExampleHeader = (props) => (
   <Dropdown
     text='Menu'
     icon='circle'
@@ -17,7 +18,7 @@ const DropdownExampleHeader = () => (
       
       <Link className="ui button  fluid" to = "/atelier"><Dropdown.Item>Home</Dropdown.Item></Link>
       {
-           this.props.auth.email === "braumuntenesc@gmail.com"
+           props.auth.email === "braumuntenesc@gmail.com"
            ? 
            <Link className="ui button   fluid" to = "/atelierAdminPanel"><Dropdown.Item>Admin panel</Dropdown.Item></Link>
         : null
@@ -28,4 +29,12 @@ const DropdownExampleHeader = () => (
   </Dropdown>
 )
 
-export default DropdownExampleHeader
+const mapStateToProps = (state) => {
+  return {
+     auth: state.auth
+  }
+}
+
+
+
+export default connect(mapStateToProps)(DropdownExampleHeader)
