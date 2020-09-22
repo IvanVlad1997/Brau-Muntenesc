@@ -102,6 +102,11 @@ export const AuthUser = (state = {
                 uid: action.payload.uid,
                 persistance: action.payload.persistance,
                 errMess: null}  
+
+
+        case ActionTypes.STERGE_EROARE:
+            return {...state,
+            errMess: null}
         
 
         

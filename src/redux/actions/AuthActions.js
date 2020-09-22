@@ -281,3 +281,6 @@ export const facebookLogin = () => (dispatch) => {
 
 
 
+export const stergeEroarea = () => dispatch => {
+  return dispatch({type: ActionTypes.STERGE_EROARE})
+}

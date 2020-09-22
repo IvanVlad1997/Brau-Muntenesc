@@ -68,8 +68,8 @@ class Main extends React.Component{
              </Grid.Column>
               <Grid.Column>
               <StartPageCircle image1 ='https://i.imgur.com/xDl9JTR.jpg' 
-                            image2 = 'https://i.imgur.com/xDl9JTR.jpg'
-                            title = 'Atelier'
+                            image2 = 'https://i.imgur.com/EPKtlii.jpg'
+                            title = 'Broderie'
                             link = '/Atelier'/>  
             </Grid.Column>
             </Grid.Row>

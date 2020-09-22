@@ -5,7 +5,7 @@ import {Router, Route,Switch, Link } from 'react-router-dom'
 import {connect} from 'react-redux'
 
 import {schimbaDimensiuni} from './redux/actions/actiuni'
-import {userRedux} from './redux/actions/AuthActions'
+import {userRedux, stergeEroarea} from './redux/actions/AuthActions'
 import history from './history'
 import Cursuri from './components/Cursuri/Cursuri'
 import Evenimente from './components/Evenimente/Evenimente'
@@ -88,7 +88,11 @@ updateDimensions = () => {
 }
 
 eroareLogare() {
-  if (this.props.auth.errMess && this.props.auth.errMess !==undefined) alert(this.props.auth.errMess)
+  if (this.props.auth.errMess && this.props.auth.errMess !==undefined) {
+    alert(this.props.auth.errMess)
+    this.props.stergeEroarea()
+    
+  }
 }
 
 
@@ -150,4 +154,4 @@ eroareLogare() {
  }
 }
 
-export default connect(mapStateToProps,{userRedux, schimbaDimensiuni})(App);
+export default connect(mapStateToProps,{userRedux, schimbaDimensiuni, stergeEroarea})(App);
