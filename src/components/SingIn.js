@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button, Grid, Header, Message } from 'semantic-ui-react'
 import {Control, Form} from 'react-redux-form'
-import {loginUser, googleLogin} from '../redux/actions/AuthActions'
+import {loginUser, googleLogin, facebookLogin} from '../redux/actions/AuthActions'
 import {connect} from 'react-redux'
 
 import {Link} from 'react-router-dom'
@@ -21,6 +21,9 @@ class LoginForm extends React.Component {
     handleClick1 = () => {
       this.props.googleLogin()
   }
+  handleClick2 = () => {
+    this.props.facebookLogin()
+}
     render() {
  
       
@@ -40,7 +43,7 @@ class LoginForm extends React.Component {
                 style={{ padding: 10 }}>
                    
                       
-                    <label htmlFor="user.user">User</label>
+                    <label htmlFor="user.user">Email</label>
                     <Control.text model="user.user" id="user" />
                     <label htmlFor="user.password">Password</label>
                     <Control.text type="password" model="user.password" id="password" />
@@ -60,7 +63,9 @@ class LoginForm extends React.Component {
           Folosește Google 
           </Button>  
 
-  
+          <Button style={{ padding: 10 }} onClick={()=> this.handleClick2()} color ="facebook">
+          Folosește Facebook 
+          </Button>  
            
          
     </Grid.Column>
@@ -69,7 +74,7 @@ class LoginForm extends React.Component {
     }
 }
 
-export default connect(null, {loginUser, googleLogin})(LoginForm)
+export default connect(null, {loginUser, googleLogin, facebookLogin})(LoginForm)
 
 
        

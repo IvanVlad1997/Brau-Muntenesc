@@ -2,6 +2,7 @@ import * as ActionTypes from './ActionTypes';
 import { auth, firebaseauth, firestore, firebasestore } from '../../firebase/firebase'
 import history from '../../history'
 
+
  
 export const userRedux = (uid) => (dispatch) => {
     
@@ -203,5 +204,80 @@ export const googleLogin = () => (dispatch) => {
         .catch(error => (dispatch({type: ActionTypes.LOGIN_FAILURE, payload: error})))
     
 }
+
+//facebook Login
+
+export const facebookLogin = () => (dispatch) => {
+  const provider = new firebaseauth.FacebookAuthProvider()
+
+  dispatch({type:ActionTypes.LOGIN_REQUEST})
+ 
+  return auth.signInWithPopup(provider)
+  .then((c) => { 
+      console.log(c.user)
+      const date= {};
+      date.email= c.user.email;
+      date.uid = c.user.uid;
+      date.userName = c.user.displayName
+      date.password = 'parola'
+      date.LoggedWith = 'Facebook'
+      date.persistance =  true
+      dispatch({type:ActionTypes.LOGIN_SUCCESS, payload: date})
+      return date})
+      .then((d) => { firestore.collection('users').doc(d.uid).set({
+      email: d.email,
+      uid : d.uid,
+      userName : d.userName,
+      LoggedWith : d.LoggedWith,
+      persistance :  d.persistance
+      })
+      return d;
+    })
+    .then((d) => {     
+      firestore.collection("profiles").doc(d.uid).get()
+      .then(doc => {
+        if (doc.exists) {
+          return 
+        }
+        else
+        return firestore.collection('profiles').doc(d.uid).set({
+          email: d.email,
+          uid : d.uid,
+          nume : 'Nume',
+          nrTel : 'Telefon',
+          grupa: 'Fără grupă',
+          sumaUltimaPlata :'Ultima Plata',
+          optiuneAbonament : 'Optiune Abonament',
+      })    
+     
+    })
+    return d;
+  
+  }
+  )
+  .then((d) => {
+    console.log(d)
+    firestore.collection("plati").doc(d.uid).get()
+    .then(doc => {
+      if (doc.exists) {
+        return 
+      }
+      else
+      return firestore.collection('plati').doc(d.uid).set({
+        uid : d.uid,
+       optiuneAbonament: 'Optiune Abonament',
+       date: new Date(),
+       platitPanaLa: new Date(),
+       sumaUltimaPlata: '0',
+       istoricPlati: [],
+    })    
+   
+  })
+  })
+      .then(history.push("/"))
+      .catch(error => (dispatch({type: ActionTypes.LOGIN_FAILURE, payload: error})))
+  
+}
+
 
 

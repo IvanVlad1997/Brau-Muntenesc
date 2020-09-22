@@ -38,8 +38,9 @@ import {Button} from 'semantic-ui-react'
 
 class App extends React.Component {
 
-  componentDidMount() {
 
+  componentDidMount() {
+   
    
 
 
@@ -67,7 +68,7 @@ updateDimensions = () => {
  Functie (){
    console.log('asdadwadawdwadawdaw')
   const cookies = new Cookies();
-  if (cookies.get('GDPR') === undefined) 
+  if (cookies.get('GDPR') === undefined){
   {cookies.set('GDPR', 'Vazut', { path: '/' })
   // alert("Continuând să navigați, acceptați politica de confidențialitate. Link: http://localhost:3000/politicaconfidentialitate")
     return (
@@ -82,8 +83,12 @@ updateDimensions = () => {
      
      
 
-      )
+      )}
 }
+}
+
+eroareLogare() {
+  if (this.props.auth.errMess && this.props.auth.errMess !==undefined) alert(this.props.auth.errMess)
 }
 
 
@@ -98,6 +103,7 @@ updateDimensions = () => {
               
           <Router history={history}>
           {this.Functie()}  
+          {this.eroareLogare()}
               <div>
                
                   <Switch>
@@ -139,7 +145,8 @@ updateDimensions = () => {
 
  const mapStateToProps = (state) => {
  return {
-   dimensiuni: state.dimensiuni
+   dimensiuni: state.dimensiuni,
+   auth: state.auth
  }
 }
 

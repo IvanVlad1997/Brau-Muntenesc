@@ -17,7 +17,7 @@ const Category = (props) => {
         }, [])
     let produse
     console.log(props)  
-    if (props.produse[0] !== '' ) produse = props.produse.map((produs, index) => {
+    if (props.produse[0] !== '' && props.categorie[0] !== '' ) produse = props.produse.map((produs, index) => {
          if (produs.categorie === props.categorie.numeCategorie)
          return <div key ={index}><ProductItem produs={produs} /></div>
       })
@@ -36,7 +36,7 @@ const Category = (props) => {
                                 style = {{paddingTop: 20, paddingBottom: 20}}
                                 color = "black"
                                 textAlign= "center"
-                                size='huge'>Categorii
+                                size='huge'>Produse
                             </Header>
                         </Grid.Column>
                         

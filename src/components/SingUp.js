@@ -24,7 +24,7 @@ class LoginForm extends React.Component {
       <Form className= "ui form"
                 model="user"
                 onSubmit={(creds) => this.onSubmit(creds) }>
-                    <label htmlFor="user.user">User</label>
+                    <label htmlFor="user.user">Email</label>
                     <Control.text model="user.user" id="user" />
                     <label htmlFor="user.password">Password</label>
                     <Control.text type="password" model="user.password" id="password" />
