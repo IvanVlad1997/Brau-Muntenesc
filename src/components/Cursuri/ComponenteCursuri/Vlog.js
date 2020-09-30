@@ -2,7 +2,7 @@ import React from 'react'
 import {Control, Form} from 'react-redux-form'
 import {connect} from 'react-redux'
 import {adaugaVideo, deleteVideo, aducVideo} from '../../../redux/actions/actiuni'
-import { List, Button, Card, Container, Grid, GridColumn, Header } from 'semantic-ui-react'
+import { List, Button, Container, Grid,  Header } from 'semantic-ui-react'
 import './UrmaresteVlog'
 import ReactPlayer from 'react-player'
 import history from '../../../history'
@@ -125,7 +125,7 @@ class Vlog extends React.Component{
         else
         return(
             <Container style={{paddingTop:15}} >
-                 <Button onClick={() => history.goBack()}>Du-mă înapoi</Button>       
+                 <Button onClick={() => history.push("/Cursuri")}>Du-mă înapoi</Button>       
                  <StickyContainer>
                 <Grid>
                 <Grid.Row>

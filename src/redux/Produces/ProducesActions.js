@@ -1,5 +1,5 @@
 import * as ActionTypes from './ProducesConstants'
-import { auth, firestore, fireauth, firebasestore, storage } from '../../firebase/firebase'
+import {  firestore} from '../../firebase/firebase'
 import history from '../../history'
 
 export const adaugaProdus = (p) => (dispatch) => {

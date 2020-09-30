@@ -1,9 +1,9 @@
 import React from 'react'
-import { Button, Grid, Header, Image, Message, Segment } from 'semantic-ui-react'
+import { Grid, Header } from 'semantic-ui-react'
 import {Form, Control} from 'react-redux-form'
 import {singupUser} from '../redux/actions/AuthActions'
 import {connect} from 'react-redux'
-import { auth } from '../firebase/firebase'
+
 
 class LoginForm extends React.Component {
 

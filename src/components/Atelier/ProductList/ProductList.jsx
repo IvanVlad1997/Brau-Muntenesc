@@ -1,6 +1,5 @@
 
 import React, {useEffect} from 'react';
-import { Link } from 'react-router-dom';
 import {aducProduse} from '../../../redux/Produces/ProducesActions'
 import {aducCategorie} from '../../../redux/CategorieAtelier/CategorieAtelierActions'
 import { connect } from 'react-redux';
@@ -10,16 +9,18 @@ import {Grid, Header} from 'semantic-ui-react'
 
 
 const Category = (props) => {
+    const {aducCategorie, aducProduse} = props
     useEffect(() => {
-        props.aducCategorie()
-        props.aducProduse()
+        aducCategorie()
+        aducProduse()
         
-        }, [])
+        }, [aducCategorie, aducProduse])
     let produse
     console.log(props)  
     if (props.produse[0] !== '' && props.categorie[0] !== '' ) produse = props.produse.map((produs, index) => {
          if (produs.categorie === props.categorie.numeCategorie)
          return <div key ={index}><ProductItem produs={produs} /></div>
+         else return null;
       })
     
     return (

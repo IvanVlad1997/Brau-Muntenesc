@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Card, Grid, Icon, Image } from 'semantic-ui-react'
+import { Button, Grid } from 'semantic-ui-react'
 import {Link} from 'react-router-dom'
 import './CategoryItem.css'
 import { LazyLoadImage } from 'react-lazy-load-image-component';

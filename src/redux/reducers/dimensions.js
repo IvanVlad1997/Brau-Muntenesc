@@ -1,5 +1,5 @@
 import * as ActionTypes from '../actions/ActionTypes'
-import _ from 'lodash'
+
 
 export const Dimensiuni = (state = {
  width: window.innerWidth,

@@ -1,6 +1,6 @@
 import React from 'react' 
 import StartPageCircle from './StartPageCircle'
-import {Grid, Image} from 'semantic-ui-react'
+import {Grid} from 'semantic-ui-react'
 import {connect} from 'react-redux'
 
 
@@ -86,6 +86,7 @@ class Main extends React.Component{
               <Grid.Column>
               </Grid.Column>
             </Grid.Row>
+            
            
           </Grid>
 

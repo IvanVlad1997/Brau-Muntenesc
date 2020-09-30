@@ -50,13 +50,14 @@ class App extends React.Component {
           console.log(" No user is signed in.")
         }         
     }); 
-    window.addEventListener('resize', this.updateDimensions);  
+    window.addEventListener('resize', this.updateDimensions); 
+   
 }
 componentWillUnmount() {
   window.removeEventListener('resize', this.updateDimensions);
 }
 updateDimensions = () => {
-  this.props.schimbaDimensiuni (window.innerWidth, window.innerHeight );
+  // this.props.schimbaDimensiuni (window.innerWidth, window.innerHeight );
 
 
 };
@@ -73,11 +74,13 @@ updateDimensions = () => {
   // alert("Continuând să navigați, acceptați politica de confidențialitate. Link: http://localhost:3000/politicaconfidentialitate")
     return (
 
-      <div style={{background:"gray", height:200, color: "black", pading: 40, textAlign: "center"}}>
+      <div  style={{background:"gray", height:150, color: "black", pading: 40, textAlign: "center", opacity: 0.8}}>
         
-      <h2>Continuând să navigați, acceptați 
-      politica de confidențialitate. Apăsați aici pentru a fi redirecționați pe pagina Politicii de confidențialitate.
-      <br /><Link to="/politicaconfidentialitate">Politica de confidentialitate</Link>  <Button onClick={this.refreshPage}>Am înțeles</Button> </h2>
+      <h2>
+        Continuând să navigați, acceptați politica de confidențialitate. Apăsați <Link  to="/politicaconfidentialitate">aici</Link> pentru a fi redirecționați pe pagina Politicii de confidențialitate.
+  
+      <Button onClick={this.refreshPage}>Am înțeles</Button> 
+      </h2>
     
       </div>
      
@@ -106,8 +109,9 @@ eroareLogare() {
           <React.Fragment>   
               
           <Router history={history}>
-          {this.Functie()}  
+          {this.Functie()}
           {this.eroareLogare()}
+          
               <div>
                
                   <Switch>

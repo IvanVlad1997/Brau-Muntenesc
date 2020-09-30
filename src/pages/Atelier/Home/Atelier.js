@@ -1,8 +1,8 @@
 import React from 'react'
 import CategoryList from '../../../components/Atelier/CategoryList/CategoryList'
 import Layout from '../../../components/Atelier/Layout/Layout'
-import {Grid, Header, Button, Container} from 'semantic-ui-react'
-import history from '../../../history'
+import {Grid, Header} from 'semantic-ui-react'
+
 
 class Atelier extends React.Component {
     render() {

@@ -17,10 +17,11 @@ const Galerie = (props) => {
     const [name, setname] = useState('')
     console.log(props)
     
+    const {aducGalerie} = props
 
     useEffect(() => {
-        props.aducGalerie()
-      }, []);
+        aducGalerie()
+      }, [aducGalerie]);
     
 
     const handleFireBaseUpload = e => {

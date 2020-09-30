@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux'
 import {aducGalerieVideo, deleteGalerieVideo, adaugaGalerieVideo} from '../../../redux/actions/actiuni'
-import {Button, Container, Grid, Card, Header} from 'semantic-ui-react'
+import {Button, Container, Grid, Header} from 'semantic-ui-react'
 import { Link } from 'react-router-dom';
 import {Form, Control} from 'react-redux-form'
 import ReactPlayer from 'react-player'

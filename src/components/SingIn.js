@@ -1,10 +1,9 @@
 import React from 'react'
-import { Button, Grid, Header, Message } from 'semantic-ui-react'
+import { Button, Grid, Header } from 'semantic-ui-react'
 import {Control, Form} from 'react-redux-form'
 import {loginUser, googleLogin, facebookLogin} from '../redux/actions/AuthActions'
 import {connect} from 'react-redux'
 
-import {Link} from 'react-router-dom'
 
 class LoginForm extends React.Component {
 

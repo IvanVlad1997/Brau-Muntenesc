@@ -1,5 +1,5 @@
 import * as ActionTypes from '../CategorieAtelier/CategorieAtelierConstants'
-import { auth, firestore, fireauth, firebasestore, storage } from '../../firebase/firebase'
+import { firestore } from '../../firebase/firebase'
 import history from '../../history'
 
 export const adaugaCategorie = (p) => (dispatch) => {

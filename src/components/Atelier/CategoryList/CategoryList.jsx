@@ -1,17 +1,17 @@
 
 import React, {useEffect} from 'react';
-import { Link } from 'react-router-dom';
-import {Header, Button, Grid} from 'semantic-ui-react'
 import { connect } from 'react-redux';
 import {aducCategorie} from '../../../redux/CategorieAtelier/CategorieAtelierActions'
+
 import Loading from '../../Loading';
 import CategoryItem from '../CategoryItem/CategoryItem'
 
 
 const CategoryList = (props) => {
+    const {aducCategorie} = props
     useEffect(() => {
-        props.aducCategorie()
-    }, [])
+        aducCategorie()
+    }, [aducCategorie])
     
     
     if (props.listaCategorii.categorie !== '' )

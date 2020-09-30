@@ -1,5 +1,5 @@
 import * as ActionTypes from './ActionTypes';
-import { auth, firebaseauth, firestore, firebasestore } from '../../firebase/firebase'
+import { auth, firebaseauth, firestore } from '../../firebase/firebase'
 import history from '../../history'
 
 

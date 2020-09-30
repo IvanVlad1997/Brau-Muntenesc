@@ -30,7 +30,7 @@ const SegmentExamplePlaceholderGrid = () => (
         <Image 
         circular
         verticalAlign='middle'
-        src = "https://scontent.fsbz1-2.fna.fbcdn.net/v/t1.0-9/118268792_3235592326548781_5766471555314547545_o.jpg?_nc_cat=101&_nc_sid=730e14&_nc_eui2=AeH0g9VeNtu20nz3Yxdaok6Bl_8mIMh_2xSX_yYgyH_bFCM2xhAI21TX0Lop2ycv8cRem6kgF1tNN5slxmzmwOcV&_nc_ohc=eOf3A28nNl8AX-b_oZm&_nc_ht=scontent.fsbz1-2.fna&oh=33c81288cc838021f1445b3b8c18b2b7&oe=5F674E32"
+        src = "https://i.imgur.com/6rgKmAg.jpg"
         size = "medium" />
           <Header color="red">           
             Vulpe Andreea Georgiana

@@ -1,5 +1,4 @@
 import * as ActionTypes from '../actions/ActionTypes'
-import _ from 'lodash'
 
 
 export default (state = {error:false}, action) => {

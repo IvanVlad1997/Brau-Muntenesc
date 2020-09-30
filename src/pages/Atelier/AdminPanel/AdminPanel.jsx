@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
-import {Button, Form} from 'semantic-ui-react'
 import { connect } from 'react-redux';
 import Loading from '../../../components/Loading';
 

@@ -1,6 +1,6 @@
 
 import * as ActionTypes from './ActionTypes';
-import { auth, firestore, fireauth, firebasestore } from '../../firebase/firebase'
+import {  firestore } from '../../firebase/firebase'
 import history from '../../history'
 
 
@@ -110,7 +110,7 @@ export const plateste = (id, valori) => dispatch => {
     .then(doc => {
 
         Date.prototype.addDays = function(days) {
-            var date = new Date(this.valueOf());
+            let date = new Date(this.valueOf());
             date.setDate(date.getDate() + days);
             return date;
         }
@@ -119,7 +119,7 @@ export const plateste = (id, valori) => dispatch => {
         const zi =valori.zi
         const luna = valori.luna
         const an =valori.an
-        var  date;
+        let  date;
         if (valori.astazi) {
              date = new Date();
         }  

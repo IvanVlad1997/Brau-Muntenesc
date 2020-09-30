@@ -8,10 +8,11 @@ import { aducCategorie } from '../../../redux/CategorieAtelier/CategorieAtelierA
 import Loading from '../../../components/Loading';
 
 const NewCategory = (props) => {
+  const {aducCategorie} = props
   useEffect(() => {
-    props.aducCategorie()
+    aducCategorie()
     
-  }, [])
+  }, [aducCategorie])
 
 if (props.categorii.categorie !=='')  return (
   

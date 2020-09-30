@@ -6,9 +6,7 @@ import { Link } from 'react-router-dom';
 import {Form, Control} from 'react-redux-form'
 import ReactPlayer from 'react-player'
 import '../../Cursuri/ComponenteCursuri/UrmaresteVlog'
-import history from '../../../history'
-import EmbededYT from '../../Cursuri/ComponenteCursuri/EmbededYt'
-import Titlu from '../../Cursuri/ComponenteCursuri/Titlu'
+
 
 class GalerieVideoEvenimente extends React.Component {
     componentDidMount() {

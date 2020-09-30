@@ -4,15 +4,13 @@ import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 
  class MenuExampleInverted extends Component {
-    constructor(props) {
-        super(props)
-    }
-  state = { activeItem: 'home' }
+  
+ 
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
   render() {
-    const { activeItem } = this.state
+   
 
     return (
       <Menu inverted>

@@ -1,8 +1,7 @@
 
-import React, {useEffect} from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
 
-import Layout from '../../../components/Atelier/Layout/Layout';
+
 import ProductList from '../../../components/Atelier/ProductList/ProductList'
 
 

@@ -47,10 +47,12 @@ class TabelInfo extends React.Component{
                        <Table.Cell>{plata.sumaUltimaPlata}</Table.Cell>
                      </Table.Row>            
                 )
+                else return null;
         
                 
       
        }
+       else return null;
    })
 })
 }

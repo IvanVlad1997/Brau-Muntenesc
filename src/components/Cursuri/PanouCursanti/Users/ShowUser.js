@@ -5,7 +5,7 @@ import { Button, List } from 'semantic-ui-react'
 import {Link} from 'react-router-dom'
 import Loading from '../../../Loading'
 import Moment from 'react-moment'
-import { plata } from '../../../../redux/reducers/plata'
+
 
 class ShowUser extends React.Component {
     componentDidMount() {

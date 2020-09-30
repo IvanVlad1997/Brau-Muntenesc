@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react'
-import { Card, Grid, Icon, Image } from 'semantic-ui-react'
-import { Link } from 'react-router-dom';
+import {  Grid,  Image } from 'semantic-ui-react'
+
 import { connect } from 'react-redux';
 import { aducProduse } from '../../../redux/Produces/ProducesActions';
 import Loading from '../../../components/Loading';
@@ -10,16 +10,17 @@ import './SingleProduct.css'
 
 
 const SingleProduct = (props) =>{
+   const {aducProduse} = props
     useEffect(() => {
-        props.aducProduse()
+        aducProduse()
       
-    }, [])
+    }, [aducProduse])
 
     console.log(props)
   
     if(props.produs !==undefined){
      
-      const proprietati = {width: 400, height:400, zoomWidth: 300, img: props.produs.linkImagine, zoomPosition:"original"};
+      
       return (
        
     <Layout>

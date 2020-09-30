@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './Header.css';
 import { connect } from 'react-redux';
 import Menu from '../Menu/Menu'
