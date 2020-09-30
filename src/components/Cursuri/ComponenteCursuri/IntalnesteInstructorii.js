@@ -18,7 +18,7 @@ const SegmentExamplePlaceholderGrid = () => (
         <Image 
         circular
         verticalAlign='middle'
-        src = "https://firebasestorage.googleapis.com/v0/b/brau-muntenesc.appspot.com/o/Imagini%20adaugate%20manual%2FAP5A5983.webp?alt=media&token=ce68ec37-b37d-4ee8-afd1-e620df8d6ec6"
+        src = "https://i.imgur.com/o5CucA9.jpg"
         size = "medium" />
           <Header  color="red">
             Ivan Vlad Gabriel
@@ -30,7 +30,7 @@ const SegmentExamplePlaceholderGrid = () => (
         <Image 
         circular
         verticalAlign='middle'
-        src = "https://i.imgur.com/6rgKmAg.jpg"
+        src = "https://i.imgur.com/NPTKj5Q.jpg"
         size = "medium" />
           <Header color="red">           
             Vulpe Andreea Georgiana

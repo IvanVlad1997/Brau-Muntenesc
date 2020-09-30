@@ -22,7 +22,7 @@ class Main extends React.Component{
               
               </Grid.Column>
               <Grid.Column width={10}  className="ui container center aligned" stretched>
-              <StartPageCircle image1 ='https://i.imgur.com/mhxCTMS.jpg' 
+              <StartPageCircle image1 ='https://i.imgur.com/sYCWMHd.jpg' 
                                
                                 title = 'Cursuri'
                                 link = '/Cursuri'/>  
@@ -32,7 +32,7 @@ class Main extends React.Component{
             <Grid.Row>
             <Grid.Column width={3} ></Grid.Column>
               <Grid.Column width={10} stretched>
-              <StartPageCircle image1 ='https://i.imgur.com/EPKtlii.jpg' 
+              <StartPageCircle image1 ='https://i.imgur.com/tbD3otb.jpg' 
                             
                             title = 'Broderie'
                             link = '/Atelier'/>  
@@ -41,7 +41,7 @@ class Main extends React.Component{
             <Grid.Row>
             <Grid.Column width={3}></Grid.Column>
               <Grid.Column width={10} stretched>
-              <StartPageCircle image1 ='https://i.imgur.com/e5zxZhe.jpg' 
+              <StartPageCircle image1 ='https://i.imgur.com/B1HA1qs.jpg' 
                             
                             title = 'Evenimente'
                             link = '/Evenimente'/>
@@ -59,16 +59,16 @@ class Main extends React.Component{
             <Grid.Row></Grid.Row>
             <Grid.Row>
               <Grid.Column>
-              <StartPageCircle image1 ='https://i.imgur.com/mhxCTMS.jpg' 
-                                image2 = 'https://i.imgur.com/ldPmP4D.jpg'
+              <StartPageCircle image1 ='https://i.imgur.com/sYCWMHd.jpg' 
+                                image2 = 'https://i.imgur.com/gKSUxuh.jpg'
                                 title = 'Cursuri'
                                 link = '/Cursuri'/>              
             </Grid.Column>
               <Grid.Column>
              </Grid.Column>
               <Grid.Column>
-              <StartPageCircle image1 ='https://i.imgur.com/xDl9JTR.jpg' 
-                            image2 = 'https://i.imgur.com/EPKtlii.jpg'
+              <StartPageCircle image1 ='https://i.imgur.com/tbD3otb.jpg' 
+                                image2 = 'https://i.imgur.com/eygSYBy.jpg'
                             title = 'Broderie'
                             link = '/Atelier'/>  
             </Grid.Column>
@@ -78,8 +78,8 @@ class Main extends React.Component{
               <Grid.Column>
               </Grid.Column>
               <Grid.Column>
-              <StartPageCircle image1 ='https://i.imgur.com/e5zxZhe.jpg' 
-                            image2 = 'https://i.imgur.com/X4H7upb.jpg'
+              <StartPageCircle image1 ='https://i.imgur.com/B1HA1qs.jpg' 
+                            image2 = 'https://i.imgur.com/QBvPmvw.jpg'
                             title = 'Evenimente'
                             link = '/Evenimente'/>
               </Grid.Column>

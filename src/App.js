@@ -57,7 +57,7 @@ componentWillUnmount() {
   window.removeEventListener('resize', this.updateDimensions);
 }
 updateDimensions = () => {
-  // this.props.schimbaDimensiuni (window.innerWidth, window.innerHeight );
+  this.props.schimbaDimensiuni (window.innerWidth, window.innerHeight );
 
 
 };
