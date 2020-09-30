@@ -7,6 +7,10 @@ export const adaugaProdus = (p) => (dispatch) => {
        categorie: p.categorie,
        descriere: p.descriere,
        linkImagine: p.linkImagine,
+       linkImagine1: p.linkImagine1,
+       linkImagine2: p.linkImagine2,
+       linkImagine3: p.linkImagine3,
+       linkImagine4: p.linkImagine4,
        culoare: p.culoare,
        marime: p.marime,
        pret: p.pret
@@ -17,6 +21,10 @@ export const adaugaProdus = (p) => (dispatch) => {
             date.categorie = p.categorie
             date.descriere = p.descriere
             date.linkImagine = p.linkImagine
+            date.linkImagine1 = p.linkImagine1
+            date.linkImagine2 = p.linkImagine2
+            date.linkImagine3 = p.linkImagine3
+            date.linkImagine4 = p.linkImagine4
             date.culoare = p.culoare
             date.marime = p.marime
             date.pre = p.pret
@@ -38,13 +46,17 @@ export const aducProduse = () => dispatch => {
             const categorie = c.categorie
             const descriere =c.descriere
             const linkImagine = c.linkImagine
+            const linkImagine1 = c.linkImagine1
+            const linkImagine2 = c.linkImagine2
+            const linkImagine3 = c.linkImagine3
+            const linkImagine4 = c.linkImagine4
             const marime = c.marime
             const pret = c.pret
             const culoare = c.culoare
             const id =doc.id
             
            
-            produse.push({categorie, descriere, linkImagine, culoare, pret, marime,  id})
+            produse.push({categorie, descriere, linkImagine, linkImagine2, linkImagine3, linkImagine4, linkImagine1, culoare, pret, marime,  id})
            
             
         })

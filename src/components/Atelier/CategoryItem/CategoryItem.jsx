@@ -36,7 +36,7 @@ const CategoryItem = (props) =>{
        </h5>
     <LazyLoadImage 
       alt={categorie.numeCategorie}
-      height={280}
+      height={450}
       src={categorie.linkImagine} // use normal <img> attributes as props
       width={300} />
  

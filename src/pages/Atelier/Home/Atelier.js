@@ -1,14 +1,33 @@
 import React from 'react'
 import CategoryList from '../../../components/Atelier/CategoryList/CategoryList'
 import Layout from '../../../components/Atelier/Layout/Layout'
-import {Grid, Header} from 'semantic-ui-react'
+import {Grid, Header, Segment, Container} from 'semantic-ui-react'
+import {Link} from 'react-router-dom'
+ 
 
 
 class Atelier extends React.Component {
     render() {
         return(
             <Layout>
-                <Grid >
+                
+                
+                <Grid  >
+                    
+                    <Grid.Row  >
+                        <Container>
+                        <Grid.Column stretched>
+
+                        <Segment color="red" inverted textAlign="center">
+                            <h2>Embleme, tricouri, materiale. Brodăm orice!</h2>
+                            <h4>Sună la 0751/105.873 pentru a comanda </h4>
+                            {/* TODO sau completează <Link>formularul.</Link> */}
+                        </Segment>
+                        </Grid.Column>
+                        </Container>
+                       
+
+                    </Grid.Row>
                     <Grid.Row>
                         <Grid.Column width={1}></Grid.Column>
                         <Grid.Column   width={14} >
@@ -26,7 +45,7 @@ class Atelier extends React.Component {
                                 
                                 
                                 </Grid.Row>
-                                <Grid.Row columns={2} >
+                                <Grid.Row columns={3} >
                                      <CategoryList  />              
                                 </Grid.Row>
                             </Grid>

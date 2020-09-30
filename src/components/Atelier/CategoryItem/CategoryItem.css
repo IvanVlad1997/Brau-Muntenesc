@@ -1,0 +1,11 @@
+.BeerListItem-main-card {
+    width: 320px;
+    height: 415px;
+  }
+  
+  .BeerListItem-img {
+    height: auto;
+    max-height: 250px;
+    width: auto;
+    max-width: 250px;
+  }

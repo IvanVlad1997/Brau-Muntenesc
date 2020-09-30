@@ -88,7 +88,7 @@ class Vlog extends React.Component{
                     <Grid.Column>
                    
                      
-                        <Header textAlign="center" >{this.state.titlu}</Header>
+                        <Header style={{fontSize:10}} textAlign="center" >{this.state.titlu}</Header>
                            {this.butonDelete(this.state.id)}
                             <div className='player-wrapper'>
                             <ReactPlayer
@@ -124,7 +124,7 @@ class Vlog extends React.Component{
         )
         else
         return(
-            <Container style={{paddingTop:15}} >
+            <Container style={{paddingTop:3}} >
                  <Button onClick={() => history.push("/Cursuri")}>Du-mă înapoi</Button>       
                  <StickyContainer>
                 <Grid>
@@ -142,7 +142,7 @@ class Vlog extends React.Component{
                     <Grid.Column width={11}>
                     <Sticky>
                     {({ style  }) => <h1 style={style}>   
-                        <Header textAlign="center" >{this.state.titlu}</Header>
+                        <Header  textAlign="center" >{this.state.titlu}</Header>
                            {this.butonDelete(this.state.id)}
                             <div className='player-wrapper'>
                             <ReactPlayer
