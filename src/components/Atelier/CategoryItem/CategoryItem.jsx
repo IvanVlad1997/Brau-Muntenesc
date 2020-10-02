@@ -31,9 +31,9 @@ const CategoryItem = (props) =>{
     <h3>
       {categorie.numeCategorie}
      </h3>    
-     <h5>
+     {/* <h5>
        {categorie.descriere}
-       </h5>
+       </h5> */}
     <LazyLoadImage 
       alt={categorie.numeCategorie}
       height={450}

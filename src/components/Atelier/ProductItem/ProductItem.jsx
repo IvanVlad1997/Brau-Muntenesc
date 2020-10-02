@@ -37,8 +37,11 @@ const ProductItem = (props) =>{
 
     <LazyLoadImage 
       alt={produs.descriere}
-      height={250}
+   
       src={produs.linkImagine} // use normal <img> attributes as props
+    
+       height={450}
+     
       width={300} />
  
   </Link>

@@ -6,7 +6,7 @@ import './Layout.css';
 function Layout(props) {
     return(
         <div className="layout" >
-            <Header/>
+            <Header />
    
                 { props.children }
              

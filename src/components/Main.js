@@ -2,7 +2,7 @@ import React from 'react'
 import StartPageCircle from './StartPageCircle'
 import {Grid} from 'semantic-ui-react'
 import {connect} from 'react-redux'
-
+import './Main.css'
 
 class Main extends React.Component{
     componentDidMount() {
@@ -16,35 +16,46 @@ class Main extends React.Component{
 
       if (this.props.dimensiuni.width < 1200)
         return (
-          <Grid style ={{paddingTop: 20}} className="ui centered ">
+          <Grid style ={{paddingTop: 20, margin:0}} className="ui centered ">
             <Grid.Row>
               <Grid.Column width={3}>
               
               </Grid.Column>
-              <Grid.Column width={10}  className="ui container center aligned" stretched>
+              <Grid.Column width={10}  className=" main" stretched >
               <StartPageCircle image1 ='https://i.imgur.com/sYCWMHd.jpg' 
                                
                                 title = 'Cursuri'
-                                link = '/Cursuri'/>  
+                                link = '/Cursuri'
+                                />  
+              </Grid.Column>
+              <Grid.Column width={3}>
+              
               </Grid.Column>
             
             </Grid.Row>
             <Grid.Row>
             <Grid.Column width={3} ></Grid.Column>
-              <Grid.Column width={10} stretched>
+              <Grid.Column width={10 }  className=" main" stretched>
               <StartPageCircle image1 ='https://i.imgur.com/tbD3otb.jpg' 
                             
                             title = 'Broderie'
                             link = '/Atelier'/>  
               </Grid.Column>
+              <Grid.Column width={3}>
+              
+              </Grid.Column>
             </Grid.Row>
             <Grid.Row>
             <Grid.Column width={3}></Grid.Column>
-              <Grid.Column width={10} stretched>
+              <Grid.Column width={10} className=" main" stretched>
               <StartPageCircle image1 ='https://i.imgur.com/B1HA1qs.jpg' 
                             
                             title = 'Evenimente'
                             link = '/Evenimente'/>
+
+              </Grid.Column>
+              <Grid.Column width={3}>
+              
               </Grid.Column>
             </Grid.Row>
           </Grid>

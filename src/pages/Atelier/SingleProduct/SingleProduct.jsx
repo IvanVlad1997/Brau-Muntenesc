@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from 'react'
-import { Field, Form, Formik } from 'formik';
+import React, {useEffect, useState } from 'react'
+
  
 import {  Grid,  Image } from 'semantic-ui-react'
 
@@ -19,12 +19,18 @@ const SingleProduct = (props) =>{
       
     }, [aducProduse])
 
-   
+   const [link, setlink] = useState('')
 
+    console.log(link)
     console.log(props)
+
+    const handleClick = (a) => {
+      setlink(a)
+    }
   
     if(props.produs !==undefined){
      
+
       
       return (
        
@@ -35,33 +41,34 @@ const SingleProduct = (props) =>{
         
         
          <Grid.Row   >
-            <Image  src={produs.linkImagine}   style={{maxHeight: 600 }} />
+            <Image  src={link === '' ? produs.linkImagine : link}   style={{maxHeight: 600 }} />
          </Grid.Row>
 
          <Grid.Row textAlign="center" stretched >
            <Grid.Column width={3}></Grid.Column>
-            <Grid.Column width={2}>
-                            {(produs.linkImagine !=="" ) &&  <LazyLoadImage  height={50}
+            <Grid.Column width={2} onClick= {() => {handleClick(produs.linkImagine)}}>    
+              {(produs.linkImagine !=="" ) &&  <LazyLoadImage  height={30}
                                                                               width={50}
                                                                               src={produs.linkImagine}></LazyLoadImage>}
+                           
             </Grid.Column>
-            <Grid.Column width={2}> 
-            {(produs.linkImagine1 !=="" ) &&  <LazyLoadImage  height={50}
+            <Grid.Column width={2} onClick= {() => {handleClick(produs.linkImagine1)}}> 
+            {(produs.linkImagine1 !=="" ) &&  <LazyLoadImage  height={30}
                                                                               width={50}
                                                                               src={produs.linkImagine1}></LazyLoadImage>}
             </Grid.Column>
-            <Grid.Column width={2}>
-            {(produs.linkImagine2 !=="" ) &&  <LazyLoadImage  height={50}
+            <Grid.Column width={2} onClick= {() => {handleClick(produs.linkImagine2)}}>
+            {(produs.linkImagine2 !=="" ) &&  <LazyLoadImage  height={30}
                                                                               width={50}
                                                                               src={produs.linkImagine2}></LazyLoadImage>}
             </Grid.Column>
-            <Grid.Column width={2}>
-            {(produs.linkImagine3 !=="" ) &&  <LazyLoadImage  height={50}
+            <Grid.Column width={2} onClick= {() => {handleClick(produs.linkImagine3)}}>
+            {(produs.linkImagine3 !=="" ) &&  <LazyLoadImage  height={30}
                                                                               width={50}
                                                                               src={produs.linkImagine3}></LazyLoadImage>}
             </Grid.Column>
-            <Grid.Column width={2}>
-            {(produs.linkImagine4 !=="" ) &&  <LazyLoadImage  height={50}
+            <Grid.Column width={2} onClick= {() => {handleClick(produs.linkImagine4)}}>
+            {(produs.linkImagine4 !=="" ) &&  <LazyLoadImage  height={30}
                                                                               width={50}
                                                                               src={produs.linkImagine4}></LazyLoadImage>}                                                  
                           

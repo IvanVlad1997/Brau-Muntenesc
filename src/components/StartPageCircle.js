@@ -8,10 +8,10 @@ const StartPageCircle = (props) => {
 
 if (props.dimensiuni.width <1200)
 return (
-  <Container>
+  <Container >
   <Link to={props.link}    >  
  
-  <Card style={{justifyContent: "center"}}>
+  <Card centered style={{}}>
  
     <Image size='small'  src={props.image1} wrapped ui={false} />
     <Card.Content >

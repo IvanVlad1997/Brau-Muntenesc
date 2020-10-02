@@ -5,7 +5,7 @@ import './Footer.css';
 
 function Footer() {
     return(
-        <Grid  stackable style={{textAlign:"center"}} className="footerColor" >
+        <Grid  stackable style={{textAlign:"center", margin:0}} className="footerColor" >
             <Grid.Row > 
                     <Grid.Column width={2}></Grid.Column>
                     <Grid.Column width={14} >
