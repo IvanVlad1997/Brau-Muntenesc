@@ -16,7 +16,7 @@ return (
     <Image size='small'  src={props.image1} wrapped ui={false} />
     <Card.Content >
 
-      <Card.Header  textAlign="center" style ={{fontSize:10, color: "red"}} ><Icon  name='question circle outline'></Icon> {props.title}</Card.Header>
+      <Card.Header  textAlign="center" style ={{fontSize:10, color: "red"}} ><Icon  name='hand point right outline'></Icon> {props.title}</Card.Header>
       
     </Card.Content>
    

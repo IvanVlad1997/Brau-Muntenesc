@@ -34,6 +34,7 @@ import SingleProduct from './pages/Atelier/SingleProduct/SingleProduct'
 import PoliticaConfidentialitate from './pages/PoliticaConfidentialitate/PoliticaConfidentialitate';
 import Cookies from 'universal-cookie';
 import {Button} from 'semantic-ui-react'
+import ParteneriMedia from './components/Cursuri/pages/Parteneri media/ParteneriMedia'
 
 
 class App extends React.Component {
@@ -131,6 +132,7 @@ eroareLogare() {
                       <Route exact path ="/vlog" component={Vlog} />
                       <Route exact path ="/contact" component={Contact} />
                       <Route exact path ="/galerievideo" component={GalerieVideo} />
+                      <Route exact path ="/partenerimedia" component={ParteneriMedia} />
                       <Route exact path ="/locatie" component={Locatie} />
                       <Route exact path ="/galerieevenimente" component={Gal} />   
                       <Route exact path ="/atelierAdminPanel" component={AdminPanel} />

@@ -41,6 +41,25 @@ const GridExampleOnly = () => (
       
     </Grid.Row>
 
+    <Grid.Row columns={2} style = {{paddingTop: 20}}>
+    
+    <Grid.Column >
+    <Link to = "/vlog" >
+    <Segment inverted color = "red">
+      <Button color="red" fluid>Vlog</Button>
+      </Segment>
+      </Link>
+    </Grid.Column>
+    <Grid.Column>
+    <Link to = "/partenerimedia" >
+    <Segment inverted color = "red">
+      <Button color="red" fluid>Parteneri media</Button>
+      </Segment>
+    </Link>
+    </Grid.Column>
+    
+  </Grid.Row>
+
   </Grid>
 )
 

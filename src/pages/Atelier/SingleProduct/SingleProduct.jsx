@@ -36,7 +36,7 @@ const SingleProduct = (props) =>{
        
     <Layout>
         
-      <Grid centered >
+      <Grid centered style={{margin:0}} >
         <Grid.Row > <h2>{props.produs.descriere}</h2></Grid.Row>
         
         

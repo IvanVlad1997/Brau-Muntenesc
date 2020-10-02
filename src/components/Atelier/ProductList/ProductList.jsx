@@ -25,7 +25,7 @@ const Category = (props) => {
     
     return (
         <Layout>
-        <Grid >
+        <Grid style={{margin:0}} >
             <Grid.Row>
                 <Grid.Column width={1}></Grid.Column>
                 <Grid.Column   width={14} >

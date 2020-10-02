@@ -10,7 +10,7 @@ const Contact = () => {
             <Grid centered>
                 <Grid.Row>
                     <Grid.Column>
-                    <Button onClick={() => history.goBack()}>Du-mă înapoi</Button>
+                    <Button onClick={() => history.push("/Cursuri")}>Du-mă înapoi</Button>
                     </Grid.Column>
                 </Grid.Row>
                 <Grid.Row>
