@@ -54,9 +54,17 @@ export const aducProduse = () => dispatch => {
             const pret = c.pret
             const culoare = c.culoare
             const id =doc.id
+            let links = []
+            if (linkImagine)  links.push(linkImagine)
+            if (linkImagine1) links.push(linkImagine1)
+            if (linkImagine2) links.push(linkImagine2)
+            if (linkImagine3) links.push(linkImagine3)
+            if (linkImagine4) links.push(linkImagine4)
+        
+
             
            
-            produse.push({categorie, descriere, linkImagine, linkImagine2, linkImagine3, linkImagine4, linkImagine1, culoare, pret, marime,  id})
+            produse.push({links,categorie, descriere, linkImagine, linkImagine2, linkImagine3, linkImagine4, linkImagine1, culoare, pret, marime,  id})
            
             
         })

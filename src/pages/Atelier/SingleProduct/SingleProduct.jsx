@@ -1,7 +1,7 @@
 import React, {useEffect, useState } from 'react'
 
  
-import {  Grid,  Image } from 'semantic-ui-react'
+import {  Button, Grid,  Image } from 'semantic-ui-react'
 
 import { connect } from 'react-redux';
 import { aducProduse } from '../../../redux/Produces/ProducesActions';
@@ -14,87 +14,89 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const SingleProduct = (props) =>{
    const {aducProduse,produs} = props
+  
     useEffect(() => {
         aducProduse()
+        
       
     }, [aducProduse])
 
    const [link, setlink] = useState('')
 
-    console.log(link)
-    console.log(props)
+   console.log(props)
+   
 
     const handleClick = (a) => {
       setlink(a)
     }
-  
-    if(props.produs !==undefined){
-     
-
+    
+    const nextButton = (a) => {
+      let lungime = produs.links.length -1
+    
+      if (a=== -1 ) setlink(produs.links[1])
+        else if(a=== lungime) setlink(produs.links[0])
+        else setlink(produs.links[++a])
       
+
+    }
+
+    const prevButton = (a) => {
+      let lungime = produs.links.length -1
+     
+      if (a=== -1 || a === 0 ) setlink(produs.links[lungime])
+                else setlink(produs.links[--a])
+    }
+    
+  
+    if(props.produs !==undefined){ 
       return (
        
     <Layout>
         
       <Grid centered style={{margin:0}} >
-        <Grid.Row > <h2>{props.produs.descriere}</h2></Grid.Row>
         
+      <Grid.Row > <h5>Culoare: {props.produs.culoare}</h5></Grid.Row>
+        <Grid.Row > <h5>Preț: {props.produs.pret} Lei</h5></Grid.Row>
+        <Grid.Row ><h5>Mărimi: {props.produs.marime}</h5></Grid.Row>  
         
          <Grid.Row   >
-            <Image  src={link === '' ? produs.linkImagine : link}   style={{maxHeight: 600 }} />
+            <Grid.Column style={{textAlign: "center"}} width={2}><Button   onClick={()=> {prevButton(produs.links.indexOf(link))}}>A</Button></Grid.Column>
+            <Grid.Column width={12}><Image centered  src={link === '' ? produs.linkImagine : link}   style={{maxHeight: 600 }} /></Grid.Column>
+            <Grid.Column style={{textAlign: "center"}} width={2}><Button   onClick={()=> {nextButton(produs.links.indexOf(link))}}>A</Button></Grid.Column>
          </Grid.Row>
 
          <Grid.Row textAlign="center" stretched >
            <Grid.Column width={3}></Grid.Column>
-            <Grid.Column width={2} onClick= {() => {handleClick(produs.linkImagine)}}>    
-              {(produs.linkImagine !=="" ) &&  <LazyLoadImage  height={30}
-                                                                              width={50}
+            <Grid.Column style={{padding:0}}  width={2} onClick= {() => {handleClick(produs.links[0])}}>    
+              {(produs.linkImagine !=="" ) &&  <LazyLoadImage  height={70}
+                                                                              width={70}
                                                                               src={produs.linkImagine}></LazyLoadImage>}
                            
             </Grid.Column>
-            <Grid.Column width={2} onClick= {() => {handleClick(produs.linkImagine1)}}> 
-            {(produs.linkImagine1 !=="" ) &&  <LazyLoadImage  height={30}
-                                                                              width={50}
+            <Grid.Column style={{padding:0}} width={2} onClick= {() => {handleClick(produs.links[1])}}> 
+            {(produs.linkImagine1 !=="" ) &&  <LazyLoadImage  height={70}
+                                                                              width={70}
                                                                               src={produs.linkImagine1}></LazyLoadImage>}
             </Grid.Column>
-            <Grid.Column width={2} onClick= {() => {handleClick(produs.linkImagine2)}}>
-            {(produs.linkImagine2 !=="" ) &&  <LazyLoadImage  height={30}
-                                                                              width={50}
+            <Grid.Column style={{padding:0}} width={2} onClick= {() => {handleClick(produs.links[2])}}>
+            {(produs.linkImagine2 !=="" ) &&  <LazyLoadImage  height={70}
+                                                                              width={70}
                                                                               src={produs.linkImagine2}></LazyLoadImage>}
             </Grid.Column>
-            <Grid.Column width={2} onClick= {() => {handleClick(produs.linkImagine3)}}>
-            {(produs.linkImagine3 !=="" ) &&  <LazyLoadImage  height={30}
-                                                                              width={50}
+            <Grid.Column style={{padding:0}} width={2} onClick= {() => {handleClick(produs.links[3])}}>
+            {(produs.linkImagine3 !=="" ) &&  <LazyLoadImage  height={70}
+                                                                              width={70}
                                                                               src={produs.linkImagine3}></LazyLoadImage>}
             </Grid.Column>
-            <Grid.Column width={2} onClick= {() => {handleClick(produs.linkImagine4)}}>
-            {(produs.linkImagine4 !=="" ) &&  <LazyLoadImage  height={30}
-                                                                              width={50}
+            <Grid.Column style={{padding:0}} width={2} onClick= {() => {handleClick(produs.links[4])}}>
+            {(produs.linkImagine4 !=="" ) &&  <LazyLoadImage  height={70}
+                                                                              width={70}
                                                                               src={produs.linkImagine4}></LazyLoadImage>}                                                  
                           
             </Grid.Column>
-                             
-                          
-                          
-                             
+                                            
          </Grid.Row>
-                   
-         
-        
-         
-     
-        <Grid.Row > <h5>Culoare: {props.produs.culoare}</h5></Grid.Row>
-        <Grid.Row > <h5>Preț: {props.produs.pret} Lei</h5></Grid.Row>
-        <Grid.Row ><h5>Mărimi: {props.produs.marime}</h5></Grid.Row>  
-      </Grid>      
-     
-    
-      
-     
-       
-    
- 
-  
+      </Grid>       
   </Layout>
 
 )}
