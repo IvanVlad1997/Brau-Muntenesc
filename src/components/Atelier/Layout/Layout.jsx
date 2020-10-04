@@ -5,12 +5,14 @@ import './Layout.css';
 
 function Layout(props) {
     return(
+        <div className="body">
         <div className="layout" >
             <Header />
    
                 { props.children }
              
             <Footer />
+        </div>
         </div>
     );
 }

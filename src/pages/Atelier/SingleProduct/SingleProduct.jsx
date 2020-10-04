@@ -1,7 +1,7 @@
 import React, {useEffect, useState } from 'react'
 
  
-import {  Button, Grid,  Image } from 'semantic-ui-react'
+import {  Button, Grid,  Image, Icon } from 'semantic-ui-react'
 
 import { connect } from 'react-redux';
 import { aducProduse } from '../../../redux/Produces/ProducesActions';
@@ -60,40 +60,40 @@ const SingleProduct = (props) =>{
         <Grid.Row ><h5>Mărimi: {props.produs.marime}</h5></Grid.Row>  
         
          <Grid.Row   >
-            <Grid.Column style={{textAlign: "center"}} width={2}><Button   onClick={()=> {prevButton(produs.links.indexOf(link))}}>A</Button></Grid.Column>
-            <Grid.Column width={12}><Image centered  src={link === '' ? produs.linkImagine : link}   style={{maxHeight: 600 }} /></Grid.Column>
-            <Grid.Column style={{textAlign: "center"}} width={2}><Button   onClick={()=> {nextButton(produs.links.indexOf(link))}}>A</Button></Grid.Column>
+            <Grid.Column width={2}><Button size="medium"   style={{ padding: 0}}   onClick={()=> {prevButton(produs.links.indexOf(link))}}><Icon inverted color='black' name='angle left' /></Button></Grid.Column>
+            <Grid.Column width={12}><Image centered   src={link === '' ? produs.linkImagine : link}   style={{maxHeight: 600 }} /></Grid.Column>
+            <Grid.Column  textAlign="right" width={2}><Button size="medium"    style={{ padding:0}}  onClick={()=> {nextButton(produs.links.indexOf(link))}}><Icon inverted color='black' name='angle right' /></Button></Grid.Column>
          </Grid.Row>
 
          <Grid.Row textAlign="center" stretched >
-           <Grid.Column width={3}></Grid.Column>
-            <Grid.Column style={{padding:0}}  width={2} onClick= {() => {handleClick(produs.links[0])}}>    
-              {(produs.linkImagine !=="" ) &&  <LazyLoadImage  height={70}
+         
+           
+              {(produs.linkImagine !=="" ) &&   <Grid.Column style={{padding:0}}  width={2} onClick= {() => {handleClick(produs.links[0])}}>     <LazyLoadImage  height={70}
                                                                               width={70}
-                                                                              src={produs.linkImagine}></LazyLoadImage>}
+                                                                              src={produs.linkImagine}></LazyLoadImage>  </Grid.Column>}
                            
-            </Grid.Column>
-            <Grid.Column style={{padding:0}} width={2} onClick= {() => {handleClick(produs.links[1])}}> 
-            {(produs.linkImagine1 !=="" ) &&  <LazyLoadImage  height={70}
+           
+           
+            {(produs.linkImagine1 !=="" ) &&  <Grid.Column style={{padding:0}} width={2} onClick= {() => {handleClick(produs.links[1])}}>  <LazyLoadImage  height={70}
                                                                               width={70}
-                                                                              src={produs.linkImagine1}></LazyLoadImage>}
-            </Grid.Column>
-            <Grid.Column style={{padding:0}} width={2} onClick= {() => {handleClick(produs.links[2])}}>
-            {(produs.linkImagine2 !=="" ) &&  <LazyLoadImage  height={70}
+                                                                              src={produs.linkImagine1}></LazyLoadImage>  </Grid.Column>}
+           
+           
+            {(produs.linkImagine2 !=="" ) &&   <Grid.Column style={{padding:0}} width={2} onClick= {() => {handleClick(produs.links[2])}}><LazyLoadImage  height={70}
                                                                               width={70}
-                                                                              src={produs.linkImagine2}></LazyLoadImage>}
-            </Grid.Column>
-            <Grid.Column style={{padding:0}} width={2} onClick= {() => {handleClick(produs.links[3])}}>
-            {(produs.linkImagine3 !=="" ) &&  <LazyLoadImage  height={70}
+                                                                              src={produs.linkImagine2}></LazyLoadImage></Grid.Column>}
+            
+            
+            {(produs.linkImagine3 !=="" ) && <Grid.Column style={{padding:0}} width={2} onClick= {() => {handleClick(produs.links[3])}}> <LazyLoadImage  height={70}
                                                                               width={70}
-                                                                              src={produs.linkImagine3}></LazyLoadImage>}
-            </Grid.Column>
-            <Grid.Column style={{padding:0}} width={2} onClick= {() => {handleClick(produs.links[4])}}>
-            {(produs.linkImagine4 !=="" ) &&  <LazyLoadImage  height={70}
+                                                                              src={produs.linkImagine3}></LazyLoadImage></Grid.Column>}
+            
+          
+            {(produs.linkImagine4 !=="" ) &&   <Grid.Column style={{padding:0}} width={2} onClick= {() => {handleClick(produs.links[4])}}> <LazyLoadImage  height={70}
                                                                               width={70}
-                                                                              src={produs.linkImagine4}></LazyLoadImage>}                                                  
+                                                                              src={produs.linkImagine4}></LazyLoadImage> </Grid.Column>}                                                  
                           
-            </Grid.Column>
+           
                                             
          </Grid.Row>
       </Grid>       
