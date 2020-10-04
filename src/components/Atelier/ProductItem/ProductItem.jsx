@@ -16,6 +16,7 @@ const ProductItem = (props) =>{
                 <React.Fragment>
        
         <Button onClick = {() => props.deleteProdus(id)} >Delete</Button>
+        <Link className=" ui blue button" to={`/product/edit/${id}`}  >Editeaza</Link>
        
         </React.Fragment>
         )

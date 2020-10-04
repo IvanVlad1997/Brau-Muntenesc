@@ -1,10 +1,11 @@
 import React, {useEffect, useState } from 'react'
+import {Link} from 'react-router-dom'
 
  
 import {  Button, Grid,  Image, Icon } from 'semantic-ui-react'
 
 import { connect } from 'react-redux';
-import { aducProduse } from '../../../redux/Produces/ProducesActions';
+import { aducProduse, deleteProdus} from '../../../redux/Produces/ProducesActions';
 import Loading from '../../../components/Loading';
 import Layout from '../../../components/Atelier/Layout/Layout';
 import './SingleProduct.css'
@@ -46,6 +47,23 @@ const SingleProduct = (props) =>{
       if (a=== -1 || a === 0 ) setlink(produs.links[lungime])
                 else setlink(produs.links[--a])
     }
+
+    
+  const renderDeleteButton = (id) => {
+    if( !props.auth.email) return 
+    else {
+        if (props.auth.email === "braumuntenesc@gmail.com"){
+            return ( 
+                <React.Fragment>
+       
+        <Button onClick = {() => props.deleteProdus(id)} >Delete</Button>
+        <Link className=" ui blue button" to={`/product/edit/${id}`}  >Editeaza</Link>
+       
+        </React.Fragment>
+        )
+    }
+}
+  }
     
   
     if(props.produs !==undefined){ 
@@ -94,8 +112,9 @@ const SingleProduct = (props) =>{
                                                                               src={produs.linkImagine4}></LazyLoadImage> </Grid.Column>}                                                  
                           
            
-                                            
+                                                    
          </Grid.Row>
+         {renderDeleteButton(produs.id) }     
       </Grid>       
   </Layout>
 
@@ -106,9 +125,10 @@ return <Loading />
 const mapStateToProps = (state, ownProps) => {
     return {
        produs : state.ProdusReducer[ownProps.match.params.id],
-       dimensiuni: state.dimensiuni
+       dimensiuni: state.dimensiuni,
+       auth: state.auth
     }
 }
 
 
-export default connect(mapStateToProps, {aducProduse})(SingleProduct);
+export default connect(mapStateToProps, {aducProduse, deleteProdus})(SingleProduct);

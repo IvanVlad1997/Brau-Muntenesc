@@ -16,6 +16,9 @@ export const ProdusReducer = (state = {
         case ActionTypes.DELETE_PRODUS:
              return _.omit(state, action.payload)
 
+        case ActionTypes.EDITEAZA_PRODUS:
+              return {...state, produs:[ action.payload]}
+
         default:
             return state;
 

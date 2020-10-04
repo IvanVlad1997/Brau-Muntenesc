@@ -2,24 +2,25 @@ import React, {useEffect} from 'react';
 import { Formik, Field } from 'formik';
 import {Form, Button} from 'semantic-ui-react'
 import { Link } from 'react-router-dom';
-import {adaugaProdus} from '../../../redux/Produces/ProducesActions'
+import {editeazaProdus, aducProduse} from '../../../redux/Produces/ProducesActions'
 import {connect} from 'react-redux'
 import { aducCategorie } from '../../../redux/CategorieAtelier/CategorieAtelierActions';
 import Loading from '../../../components/Loading';
 
 const NewCategory = (props) => {
-  const {aducCategorie} = props
+  const {aducCategorie, aducProduse} = props
   useEffect(() => {
     aducCategorie()
+    aducProduse()
     
-  }, [aducCategorie])
-
-if (props.categorii.categorie !=='')  return (
+  }, [aducCategorie, aducProduse])
+  
+if (props.categorii.categorie !=='' && props.produs !== undefined)  return (
   
   <React.Fragment>
     <h1>Adaugă un produs</h1>
     <Formik
-      initialValues={{ categorie: '', descriere:'', linkImagine: '', culoare: '', pret: '', marime: '', linkImagine2: '', linkImagine3: '', linkImagine4: '', linkImagine1: ''}}
+      initialValues={{ categorie: props.produs.categorie, descriere:props.produs.descriere, linkImagine: props.produs.linkImagine, culoare: props.produs.culoare, pret: props.produs.pret, marime: props.produs.marime, linkImagine2: props.produs.linkImagine2, linkImagine3: props.produs.linkImagine3, linkImagine4: props.produs.linkImagine4, linkImagine1: props.produs.linkImagine1}}
       validate={values => {
         const errors = {};
         if (!values.categorie || values.categorie ==='Neselectat') {
@@ -29,7 +30,7 @@ if (props.categorii.categorie !=='')  return (
       }}
       onSubmit={(values, { setSubmitting }) => {
         setTimeout(() => {
-           props.adaugaProdus(values)  
+           props.editeazaProdus(values, props.produs.id)  
           alert(JSON.stringify(values, null, 2));
           setSubmitting(false);
         }, 400);
@@ -184,10 +185,11 @@ return <Loading />
 }
 
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, ownProps) => {
     return {
-        categorii : Object.values(state.CategorieReducer)
+        categorii : Object.values(state.CategorieReducer),
+        produs: state.ProdusReducer[ownProps.match.params.id]
     }
 }
 
-export default connect(mapStateToProps, {aducCategorie, adaugaProdus})(NewCategory);
+export default connect(mapStateToProps, {aducCategorie, aducProduse, editeazaProdus})(NewCategory);

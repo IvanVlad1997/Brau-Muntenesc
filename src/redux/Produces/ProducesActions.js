@@ -81,3 +81,36 @@ export const deleteProdus = (id) => dispatch => {
     .catch(error => {dispatch({type:ActionTypes.FAIL, payload:error})})
 
 }
+
+
+export const editeazaProdus = (p, id) => (dispatch) => {
+    return firestore.collection('produs').doc(id).update({
+       categorie: p.categorie,
+       descriere: p.descriere,
+       linkImagine: p.linkImagine,
+       linkImagine1: p.linkImagine1,
+       linkImagine2: p.linkImagine2,
+       linkImagine3: p.linkImagine3,
+       linkImagine4: p.linkImagine4,
+       culoare: p.culoare,
+       marime: p.marime,
+       pret: p.pret
+
+    })
+    .then(()=> {
+            const date = {}
+            date.categorie = p.categorie
+            date.descriere = p.descriere
+            date.linkImagine = p.linkImagine
+            date.linkImagine1 = p.linkImagine1
+            date.linkImagine2 = p.linkImagine2
+            date.linkImagine3 = p.linkImagine3
+            date.linkImagine4 = p.linkImagine4
+            date.culoare = p.culoare
+            date.marime = p.marime
+            date.pre = p.pret
+            dispatch({type: ActionTypes.EDITEAZA_PRODUS, payload: date})
+    })
+    .then (() => history.push('/'))
+    .catch(error => {dispatch({type:ActionTypes.FAIL, payload:error})})
+}

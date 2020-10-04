@@ -35,6 +35,7 @@ import PoliticaConfidentialitate from './pages/PoliticaConfidentialitate/Politic
 import Cookies from 'universal-cookie';
 import {Button} from 'semantic-ui-react'
 import ParteneriMedia from './components/Cursuri/pages/Parteneri media/ParteneriMedia'
+import EditProduct from './pages/Atelier/EditProduct/EditProduct';
 
 
 class App extends React.Component {
@@ -140,6 +141,7 @@ eroareLogare() {
                       <Route exact path ="/newProduct" component={NewProduct} />
                       <Route exact path ="/category/:id" component={Category} />
                       <Route exact path ="/product/:id" component={SingleProduct} />
+                      <Route exact path ="/product/edit/:id" component={EditProduct} />
                       <Route exact path ="/politicaconfidentialitate" component={PoliticaConfidentialitate} />
                       <Route path="*" component={Page404}/>
                    </Switch>
