@@ -11,7 +11,7 @@ class Header extends React.Component {
     render(){
         return(
             <Menu inverted color="black">
-                <Menu.Item as='a' onClick={() =>this.props.toggleSideBar()}>
+                <Menu.Item onClick={() =>this.props.toggleSideBar()}>
                     <Icon name='list ul' />
                 </Menu.Item>
 

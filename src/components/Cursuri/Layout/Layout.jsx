@@ -27,55 +27,55 @@ function Layout(props) {
                                 </Menu.Item>
                             </Link>
                             <Link to={"/"} >
-                                <Menu.Item >
+                                <Menu.Item onClick={() => props.toggleSideBar()}>
                                     <Icon name='home' />
                                      Acasă
                                 </Menu.Item>
                             </Link>
                             <Link to={"/Cursuri"} >
-                                <Menu.Item>
-                                    <Icon name='home' />
+                                <Menu.Item  onClick={() => props.toggleSideBar()}>
+                                    <Icon name='certificate' />
                                     Cursuri
                                 </Menu.Item>
                             </Link>
                             <Link to={"/galerie"} >
-                                <Menu.Item>
+                                <Menu.Item onClick={() => props.toggleSideBar()}>
                                     <Icon name='images' />
                                     Galerie Foto
                                 </Menu.Item>
                             </Link>
                             <Link to={"/galerievideo"} >
-                                <Menu.Item>
+                                <Menu.Item onClick={() => props.toggleSideBar()}>
                                     <Icon name='film' />
                                     Galerie video
                                 </Menu.Item>
                             </Link>
                             <Link to={"/vlog"} >
-                                <Menu.Item>
+                                <Menu.Item onClick={() => props.toggleSideBar()}>
                                     <Icon name='youtube square' />
                                     Vlog
                                 </Menu.Item>
                             </Link>
                             <Link to={"/contact"} >
-                                <Menu.Item>
+                                <Menu.Item onClick={() => props.toggleSideBar()}>
                                     <Icon name='phone' />
                                     Contact
                                 </Menu.Item>
                             </Link>
                             <Link to={"/preturi"} >
-                                <Menu.Item>
+                                <Menu.Item onClick={() => props.toggleSideBar()}>
                                     <Icon name='payment' />
                                     Prețuri
                                 </Menu.Item>
                             </Link>
                             <Link to={"/program"} >
-                                <Menu.Item>
+                                <Menu.Item onClick={() => props.toggleSideBar()}>
                                     <Icon name='calendar alternate outline' />
                                     Program
                                 </Menu.Item>
                             </Link>
                             <Link to={"/partenerimedia"} >
-                                <Menu.Item>
+                                <Menu.Item onClick={() => props.toggleSideBar()}>
                                     <Icon name='newspaper outline' />
                                     Parteneri media
                                 </Menu.Item>
