@@ -17,7 +17,7 @@ const slideImages = [
 ];
  
 const Example = ({latime}) => {
-  if (latime < 1200)
+
     return (
       
         <Grid  centered >
@@ -31,28 +31,28 @@ const Example = ({latime}) => {
         </Grid>
 
       )
-  else 
-    return (
-      <div  className="slide-container">
-        <Slide>
-          <div className="each-slide"  >
-            <div style={{height:600,'backgroundImage': `url(${slideImages[0]})`}}>
+  // else 
+  //   return (
+  //     <div  className="slide-container">
+  //       <Slide>
+  //         <div className="each-slide"  >
+  //           <div style={{height:600,'backgroundImage': `url(${slideImages[0]})`}}>
               
-            </div>
-          </div>
-          <div className="each-slide" >
-            <div style={{height:600,'backgroundImage': `url(${slideImages[1]})`}}>
+  //           </div>
+  //         </div>
+  //         <div className="each-slide" >
+  //           <div style={{height:600,'backgroundImage': `url(${slideImages[1]})`}}>
               
-            </div>
-          </div>
-          <div className="each-slide" >
-            <div style={{height:600,'backgroundImage': `url(${slideImages[2]})`}}>
+  //           </div>
+  //         </div>
+  //         <div className="each-slide" >
+  //           <div style={{height:600,'backgroundImage': `url(${slideImages[2]})`}}>
               
-            </div>
-          </div>
-        </Slide>
-      </div>
-    )
+  //           </div>
+  //         </div>
+  //       </Slide>
+  //     </div>
+  //   )
 }
 
 export default Example

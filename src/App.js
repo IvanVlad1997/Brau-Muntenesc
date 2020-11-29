@@ -7,13 +7,13 @@ import {connect} from 'react-redux'
 import {schimbaDimensiuni} from './redux/actions/actiuni'
 import {userRedux, stergeEroarea} from './redux/actions/AuthActions'
 import history from './history'
-import Cursuri from './components/Cursuri/Cursuri'
-import Evenimente from './components/Evenimente/Evenimente'
+import Cursuri from './pages/Cursuri/Cursuri/Cursuri'
+import Evenimente from './pages/Evenimente/Evenimente/Evenimente'
 import Atelier from './pages/Atelier/Home/Atelier'
 import {auth} from './firebase/firebase'
 import SingIn from './components/SingIn';
 import SingUp from './components/SingUp';
-import PanouCursanti from './components/Cursuri/PanouCursanti/PanouCursanti'
+import PanouCursanti from './pages/Cursuri/PanouCursanti/PanouCursanti'
 import ShowUser from './components/Cursuri/PanouCursanti/Users/ShowUser'
 import EditProfile from './components/Cursuri/PanouCursanti/Users/EditProfile';
 import Plateste from './components/Cursuri/PanouCursanti/Users/Plateste';
@@ -34,7 +34,7 @@ import SingleProduct from './pages/Atelier/SingleProduct/SingleProduct'
 import PoliticaConfidentialitate from './pages/PoliticaConfidentialitate/PoliticaConfidentialitate';
 import Cookies from 'universal-cookie';
 import {Button} from 'semantic-ui-react'
-import ParteneriMedia from './components/Cursuri/pages/Parteneri media/ParteneriMedia'
+import ParteneriMedia from './pages/Cursuri/Parteneri media/ParteneriMedia'
 import EditProduct from './pages/Atelier/EditProduct/EditProduct';
 
 

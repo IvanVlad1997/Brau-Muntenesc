@@ -109,10 +109,8 @@ class Preturi extends React.Component{
 
 const mapStateToProps = (state) => {
     return{
-       
         auth : state.auth,
         preturi : Object.values(state.preturi),
-       
     }
 }
 

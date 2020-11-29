@@ -24,6 +24,7 @@ import {contactEveniment} from './reducers/contactEvenimente'
 import {alegeGrupa} from './reducers/AlegeGrupa'
 import {CategorieReducer} from './CategorieAtelier/CategorieAtelierReducer'
 import {ProdusReducer} from './Produces/ProducesReducer'
+import {SideNavReducer} from "./side-nav/side-nav-reducer";
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
@@ -44,6 +45,7 @@ export const ConfigureStore = () => {
             GalerieVideoEvenimente: GalerieVideoEvenimente,
             CategorieReducer,
             ProdusReducer,
+            sideNav: SideNavReducer,
             
 
             ...createForms({

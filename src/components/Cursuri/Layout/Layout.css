@@ -1,0 +1,12 @@
+.layout {
+    min-height: 100vh; /* will cover the 100% of viewport */
+    overflow: hidden;
+    display: block;
+    position: relative;
+    padding-bottom: 500px; /* height of your footer */
+}
+
+.body {
+    height: 100%;
+    position: relative;;
+}

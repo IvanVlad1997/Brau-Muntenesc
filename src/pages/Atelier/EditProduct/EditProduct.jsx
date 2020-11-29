@@ -18,7 +18,7 @@ const NewCategory = (props) => {
 if (props.categorii.categorie !=='' && props.produs !== undefined)  return (
   
   <React.Fragment>
-    <h1>Adaugă un produs</h1>
+    <h1>Editează produs</h1>
     <Formik
       initialValues={{ categorie: props.produs.categorie, descriere:props.produs.descriere, linkImagine: props.produs.linkImagine, culoare: props.produs.culoare, pret: props.produs.pret, marime: props.produs.marime, linkImagine2: props.produs.linkImagine2, linkImagine3: props.produs.linkImagine3, linkImagine4: props.produs.linkImagine4, linkImagine1: props.produs.linkImagine1}}
       validate={values => {

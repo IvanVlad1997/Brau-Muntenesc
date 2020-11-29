@@ -1,19 +1,20 @@
 import React, {createRef} from 'react'
-import Menu from '../Cursuri/ComponenteCursuri/Header'
-import YTVID from '../Cursuri/ComponenteCursuri/EmbededYt'
-import Titlu from '../Cursuri/ComponenteCursuri/Titlu'
-import Abureli from '../Cursuri/ComponenteCursuri/Abureli'
-import SegmentExamplePlaceholderGrid from '../Cursuri/ComponenteCursuri/IntalnesteInstructorii'
-import Inf from '../Cursuri/ComponenteCursuri/InformatiiUtile'
-import Urmareste from '../Cursuri/ComponenteCursuri/UrmaresteVlog'
-import GridExampleOnly from '../Cursuri/ComponenteCursuri/ButoaneFinal'
+import YTVID from '../../../components/Cursuri/ComponenteCursuri/EmbededYt'
+import Titlu from '../../../components/Cursuri/ComponenteCursuri/Titlu'
+import Abureli from '../../../components/Cursuri/ComponenteCursuri/Abureli'
+import SegmentExamplePlaceholderGrid from '../../../components/Cursuri/ComponenteCursuri/IntalnesteInstructorii'
+import Inf from '../../../components/Cursuri/ComponenteCursuri/InformatiiUtile'
+import Urmareste from '../../../components/Cursuri/ComponenteCursuri/UrmaresteVlog'
+import GridExampleOnly from '../../../components/Cursuri/ComponenteCursuri/ButoaneFinal'
 import { Grid, Button} from 'semantic-ui-react'
-import Example from '../Cursuri/ComponenteCursuri/Galerie'
+import Example from '../../../components/Cursuri/ComponenteCursuri/Galerie'
 import {Link} from 'react-router-dom'
 import {Sticky, StickyContainer} from 'react-sticky'
-import DropDown from './ComponenteCursuri/Dropdown'
+import DropDown from '../../../components/Cursuri/ComponenteCursuri/Dropdown'
 import {connect} from 'react-redux'
-import TextCursuri from './ComponenteCursuri/TextCursuri'
+import TextCursuri from '../../../components/Cursuri/ComponenteCursuri/TextCursuri'
+import Layout from "../../../components/Cursuri/Layout/Layout";
+import './Cursuri.css'
 
 class Cursuri extends React.Component {
     
@@ -22,15 +23,13 @@ class Cursuri extends React.Component {
      
        
         return(
-            <React.Fragment>
+            <Layout>
                
                
                <Grid centered textAlign="center">
                <Grid.Row >    
 {/* MENU */}
-                <Grid.Column width={16} style={{paddingRight:0}}>
-                    <Menu />
-                </Grid.Column>                                 
+
                 </Grid.Row>                              
                 </Grid>
                <StickyContainer> 
@@ -41,25 +40,7 @@ class Cursuri extends React.Component {
                                     
                                     <Grid.Column width={2}>
                                      
-                                    <Sticky>
-                                        {({ style  }) => <h1 style={style}>
-                                        <Button.Group vertical  >
-                                        <DropDown />
-                                            <Link to  ={{pathname: "https://www.facebook.com/BrauMuntenesc" }} target="_blank" >
-                                        <Button circular color='facebook' icon='facebook' />
-                                            </Link>
-                                            <Link to  ={{pathname: "mailto:braumuntenesc@gmai.com" }} target="_blank" >
-                                        <Button circular color='purple' icon='mail' />
-                                            </Link>
-                                            <Link to  ={{pathname: "https://www.instagram.com/brau.muntenesc/?hl=ro" }} target="_blank" >
-                                        <Button circular color='instagram' icon='instagram' />
-                                            </Link>
-                                            <Link to  ={{pathname: "https://www.youtube.com/channel/UCO5KJ1114BUb99cub0mqWqQ/videos" }} target="_blank" >
-                                        <Button circular color='youtube' icon='youtube' />
-                                            </Link>
-                                        </Button.Group>
-                                            </h1>}
-                                    </Sticky>
+
                                     
                                     </Grid.Column >
 
@@ -145,17 +126,35 @@ class Cursuri extends React.Component {
                
                                     </Grid.Column>
 
-                                    <Grid.Column width={2}>
+                                    <Grid.Column width={2} className="display-none-400px" textAlign={"right"}>
+                                        <Sticky >
+                                            {({ style  }) => <h1 style={style}>
+                                                <Button.Group vertical  >
+                                                    <DropDown />
+                                                    <Link to  ={{pathname: "https://www.facebook.com/BrauMuntenesc" }} target="_blank" >
+                                                        <Button circular color='facebook' icon='facebook' />
+                                                    </Link>
+                                                    <Link to  ={{pathname: "mailto:braumuntenesc@gmai.com" }} target="_blank" >
+                                                        <Button circular color='purple' icon='mail' />
+                                                    </Link>
+                                                    <Link to  ={{pathname: "https://www.instagram.com/brau.muntenesc/?hl=ro" }} target="_blank" >
+                                                        <Button circular color='instagram' icon='instagram' />
+                                                    </Link>
+                                                    <Link to  ={{pathname: "https://www.youtube.com/channel/UCO5KJ1114BUb99cub0mqWqQ/videos" }} target="_blank" >
+                                                        <Button circular color='youtube' icon='youtube' />
+                                                    </Link>
+                                                </Button.Group>
+                                            </h1>}
+                                        </Sticky>
                                     
                                     </Grid.Column>
                                 </Grid.Row>
                                 
                             </Grid>
                             </StickyContainer>
-                            <Titlu color="black"  titlu = "Copyrights Ivan Vlad" latime = {this.props.dimensiuni.width } />
                 
           
-            </React.Fragment>
+            </Layout>
            
         )
     }

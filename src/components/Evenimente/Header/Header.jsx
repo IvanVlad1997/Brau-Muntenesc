@@ -3,7 +3,7 @@ import { Button, Menu} from 'semantic-ui-react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import {logoutUser} from '../../../redux/actions/AuthActions'
-import TextHeader from './TextHeader'
+import TextHeader from '../../Cursuri/ComponenteCursuri/TextHeader/TextHeader'
 
 class Header extends React.Component {
 
@@ -12,30 +12,8 @@ class Header extends React.Component {
     render(){
       
     if (this.props.auth.uid){
-    if (this.props.auth.email ==="braumuntenesc@gmail.com") {
-            return(
-                <div>
-                    <Menu inverted color="black">
-                    <Menu.Item>
-                 
-                    <TextHeader titlu = "Brâu Muntenesc" />
-                    
-                    </Menu.Item>
-                    <Menu.Item position='right'>
-                    <Link to={"/PanouCursanti"} >
-                        <Button color="red">Panou Cursanti</Button>
-                    </Link>
-                      
-                    </Menu.Item>
-                    <Menu.Item >
-                    <Button onClick = {()=> this.props.logoutUser()}  color="red">Log Out</Button>
-                  </Menu.Item>
-                    </Menu>
-                </div>
-            )
-    }
-    else return(
-        <Menu inverted color="black">
+        return(
+        <Menu inverted color="blue">
             <Menu.Item>
             
           <TextHeader titlu = "Brâu Muntenesc" />
@@ -43,12 +21,12 @@ class Header extends React.Component {
         </Menu.Item>
           <Menu.Item position='right'>
             
-            <Button onClick = {()=> this.props.logoutUser()}  color="red">Log Out</Button>
+            <Button onClick = {()=> this.props.logoutUser()}  color='teal'>Log Out</Button>
             </Menu.Item>
             <Menu.Item>
-           <Link to ={`/user/${this.props.auth.uid}`} >
+           {/* <Link to ={`/user/${this.props.auth.uid}`} >
                         <Button color="red">Profil</Button>
-           </Link>
+           </Link> */}
           </Menu.Item>
         </Menu>
       
@@ -58,7 +36,7 @@ class Header extends React.Component {
     } 
    else {
       return (
-        <Menu inverted color="black" >
+        <Menu inverted color="blue" >
         <Menu.Item>
     
           <TextHeader titlu = "Brâu Muntenesc" />
@@ -66,13 +44,13 @@ class Header extends React.Component {
         </Menu.Item>
         <Menu.Item position='right'>
         <Link to={"/signup"} >
-               <Button color="red">Sign up</Button>
+               <Button color="teal">Sign up</Button>
             </Link>
         </Menu.Item>
     
         <Menu.Item >
             <Link to={"/signin"} >
-               <Button color="red">Sign in</Button>
+               <Button color="teal">Sign in</Button>
             </Link>
                 
                     

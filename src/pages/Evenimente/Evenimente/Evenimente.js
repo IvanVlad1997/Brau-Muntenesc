@@ -1,23 +1,20 @@
 import React from 'react'
-import Menu from './ComponenteEv/Menu'
 import {Grid} from 'semantic-ui-react'
-import DespreNoi from './ComponenteEv/DespreNoi'
-import Galerie from './ComponenteEv/Galerie'
-import Contact from './ComponenteEv/Contact'
+import DespreNoi from '../../../components/Evenimente/ComponenteEv/DespreNoi'
+import Galerie from '../../../components/Evenimente/ComponenteEv/Galerie'
+import Contact from '../../../components/Evenimente/ComponenteEv/Contact'
 import {connect} from 'react-redux'
+import Layout from "../../../components/Evenimente/Layout/Layout";
 
 class Evenimente extends React.Component {
     render() {
         return(
 
 
-          <React.Fragment>
+          <Layout>
                 <Grid centered textAlign="center">
-               <Grid.Row >    
-{/* MENU */}
-                <Grid.Column width={16} style={{paddingRight:0}}>
-                    <Menu />
-                </Grid.Column>                                 
+               <Grid.Row >    {/* MENU */}
+
                 </Grid.Row>                              
                 </Grid>
 
@@ -41,7 +38,7 @@ class Evenimente extends React.Component {
                 </Grid>
                 
 
-          </React.Fragment>
+          </Layout>
         )
     }
 }

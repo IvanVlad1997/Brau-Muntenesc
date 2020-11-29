@@ -29,14 +29,15 @@ const ProductItem = (props) =>{
      <Grid.Column style={{padding:30}}>
        <Link to ={`/product/${produs.id}`}>
     
-    <h3>
+    
+       <h3 >
        {produs.descriere}
      </h3>    
      <h5>
      Preț: {produs.pret} Lei
        </h5>
-
     <LazyLoadImage 
+
       alt={produs.descriere}
    
       src={produs.linkImagine} // use normal <img> attributes as props

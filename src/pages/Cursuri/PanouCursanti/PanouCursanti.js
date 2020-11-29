@@ -1,8 +1,9 @@
 import React from 'react'
 import { Redirect } from 'react-router-dom'
-import Tabel from './Tabel'
+import Tabel from '../../../components/Cursuri/PanouCursanti/Tabel'
 import {connect} from 'react-redux'
-import Loading from '../../Loading'
+import Loading from '../../../components/Loading'
+import Layout from "../../../components/Cursuri/Layout/Layout";
 
 
 
@@ -14,13 +15,14 @@ class PanouCursanti extends React.Component {
 
 
     render() {
+
         if( !this.props.auth.email) return <Loading />
         else {
             if (this.props.auth.email === "braumuntenesc@gmail.com"){
             return(
-                <div>
+                <Layout>
                     <Tabel />
-                </div>
+                </Layout>
             )
             }
             else return  <Redirect to="/" />

@@ -3,7 +3,7 @@ import React, {useEffect} from 'react';
 import {aducProduse} from '../../../redux/Produces/ProducesActions'
 import {aducCategorie} from '../../../redux/CategorieAtelier/CategorieAtelierActions'
 import { connect } from 'react-redux';
-import Layout from '../../../components/Atelier/Layout/Layout';
+import Layout from '../Layout/Layout';
 import ProductItem from '../ProductItem/ProductItem'
 import {Grid, Header} from 'semantic-ui-react'
 

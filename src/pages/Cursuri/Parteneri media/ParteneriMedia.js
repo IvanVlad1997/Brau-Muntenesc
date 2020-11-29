@@ -1,6 +1,6 @@
 import React from 'react'
 import {Card, Container,  Button,  Grid} from 'semantic-ui-react'
-import history from '../../../../history'
+import history from '../../../history'
 
 function ParteneriMedia() {
   
