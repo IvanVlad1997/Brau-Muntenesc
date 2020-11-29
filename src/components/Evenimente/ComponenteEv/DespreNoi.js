@@ -1,7 +1,7 @@
 import React from 'react'
 import {Grid} from 'semantic-ui-react'
-import YTVID from '../../Cursuri/ComponenteCursuri/EmbededYt'
-import Titlu from '../../Cursuri/ComponenteCursuri/Titlu'
+import YTVID from '../../Cursuri/ComponenteCursuri/IntroYTVideo/EmbededYt'
+import Titlu from '../../Cursuri/ComponenteCursuri/AlteTitluri/Titlu'
 
 const DespreNoi = ({latime}) => {
 

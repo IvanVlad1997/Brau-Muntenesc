@@ -17,13 +17,12 @@ import PanouCursanti from './pages/Cursuri/PanouCursanti/PanouCursanti'
 import ShowUser from './components/Cursuri/PanouCursanti/Users/ShowUser'
 import EditProfile from './components/Cursuri/PanouCursanti/Users/EditProfile';
 import Plateste from './components/Cursuri/PanouCursanti/Users/Plateste';
-import Preturi from './components/Cursuri/ComponenteCursuri/Preturi';
-import Program from './components/Cursuri/ComponenteCursuri/Program';
-import Vlog from './components/Cursuri/ComponenteCursuri/Vlog';
-import Poze from './components/Cursuri/ComponenteCursuri/Poze'
+import Preturi from './pages/Cursuri/Preturi/Preturi';
+import Program from './pages/Cursuri/Program/Program';
+import Vlog from './pages/Cursuri/Vlog/Vlog';
+import Poze from './pages/Cursuri/GalerieFoto/Poze'
 import Contact from './components/Cursuri/ComponenteCursuri/Contact';
-import GalerieVideo from './components/Cursuri/ComponenteCursuri/GalerieVideo'
-import Locatie from './components/Cursuri/ComponenteCursuri/Locatie';
+import GalerieVideo from './pages/Cursuri/GalerieVideo/GalerieVideo'
 import Gal from './components/Evenimente/ComponenteEv/Gal';
 import Page404 from './pages/Page404/Page404'
 import AdminPanel from './pages/Atelier/AdminPanel/AdminPanel';
@@ -134,7 +133,6 @@ eroareLogare() {
                       <Route exact path ="/contact" component={Contact} />
                       <Route exact path ="/galerievideo" component={GalerieVideo} />
                       <Route exact path ="/partenerimedia" component={ParteneriMedia} />
-                      <Route exact path ="/locatie" component={Locatie} />
                       <Route exact path ="/galerieevenimente" component={Gal} />   
                       <Route exact path ="/atelierAdminPanel" component={AdminPanel} />
                       <Route exact path ="/newCategory" component={NewCategory} />

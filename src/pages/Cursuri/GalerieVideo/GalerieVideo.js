@@ -5,8 +5,9 @@ import {Button, Container, Grid, Header} from 'semantic-ui-react'
 import { Link } from 'react-router-dom';
 import {Form, Control} from 'react-redux-form'
 import ReactPlayer from 'react-player'
-import './UrmaresteVlog'
+import '../../../components/Cursuri/ComponenteCursuri/UrmaresteVlogul/UrmaresteVlog'
 import history from '../../../history'
+import Layout from "../../../components/Cursuri/Layout/Layout";
 
 class GalerieVideo extends React.Component {
     componentDidMount() {
@@ -23,10 +24,8 @@ class GalerieVideo extends React.Component {
             if (this.props.auth.email === "braumuntenesc@gmail.com"){
                 return ( 
                     <React.Fragment>
-           
-            <Button onClick = {() => this.props.deleteGalerieVideo(id)} >Delete</Button>
-           
-            </React.Fragment>
+                       <Button onClick = {() => this.props.deleteGalerieVideo(id)} >Delete</Button>
+                    </React.Fragment>
             )
         }
     }
@@ -65,64 +64,50 @@ class GalerieVideo extends React.Component {
                         url={video.link}
                         width='100%'
                         height='100%'
-                       
                         controls ={true}
                         muted ={true}
-                        
                         />
                         </div> 
                 </Grid.Column>
             )
         })
-        
     }
 
     render() {
     return (
-      <Container >
-        <Grid columns='equal' className="center aligned" style = {{paddingTop: 35}} stackable={1}>
-          <Grid.Row>
-          <Grid.Column> 
-          <Button.Group size='large' >
-          <Button onClick={() => history.push('/Cursuri')}>Du-mă înapoi</Button>           
-              <Button.Or text="Sau" ></Button.Or>
-              <Link className= "ui button" to ="/galerie">La galeria foto</Link>
-          </Button.Group>
-          <Header  
-                style = {{paddingTop: 20, paddingBottom: 20}}
-                color = "red"
-                textAlign= "center"
-                size='huge'>Galerie Video</Header>
-          </Grid.Column>
-            
-            
-          </Grid.Row>
-          <Grid.Row columns={2} >
-              {this.renderLink(this.props.GalerieVideo)}
-             
-              
-          </Grid.Row>
-          {this.forma()}
-        </Grid>
-    
-           
-         
-        
-
-           
+        <Layout>
+          <Container >
+            <Grid columns='equal' className="center aligned" style = {{paddingTop: 35}} stackable={1}>
+              <Grid.Row>
+              <Grid.Column>
+              <Button.Group size='large' >
+              <Button onClick={() => history.push('/Cursuri')}>Du-mă înapoi</Button>
+                  <Button.Or text="Sau" ></Button.Or>
+                  <Link className= "ui button" to ="/galerie">La galeria foto</Link>
+              </Button.Group>
+              <Header
+                    style = {{paddingTop: 20, paddingBottom: 20}}
+                    color = "red"
+                    textAlign= "center"
+                    size='huge'>Galerie Video</Header>
+              </Grid.Column>
+              </Grid.Row>
+              <Grid.Row columns={2} >
+                  {this.renderLink(this.props.GalerieVideo)}
+              </Grid.Row>
+              {this.forma()}
+            </Grid>
           </Container>
-    )
+        </Layout>
+     )
     }
 }
 
 const mapStateToProps = (state) => {
     return{
-       
         auth : state.auth,
-        GalerieVideo : Object.values(state.GalerieVideo),
-       
+        GalerieVideo : Object.values(state.GalerieVideo)
     }
 }
-
 
 export default connect(mapStateToProps,{aducGalerieVideo, deleteGalerieVideo, adaugaGalerieVideo})(GalerieVideo)

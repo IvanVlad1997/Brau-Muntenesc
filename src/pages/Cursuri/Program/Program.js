@@ -3,8 +3,9 @@ import {Control, Form} from 'react-redux-form'
 import {connect} from 'react-redux'
 import {adaugaProgram, aducProgram, deleteProgram} from '../../../redux/actions/actiuni'
 import { List, Button, Grid, Container, Image} from 'semantic-ui-react'
-import DropDown from './Dropdown'
+import DropDown from '../../../components/Cursuri/ComponenteCursuri/DropdownDreapta/Dropdown'
 import history from '../../../history'
+import Layout from "../../../components/Cursuri/Layout/Layout";
 
 class Program extends React.Component{
     componentDidMount() {
@@ -68,45 +69,34 @@ class Program extends React.Component{
 
     render(){
         return(
-           <Grid>
-               <Grid.Row>
-                   <Grid.Column width={3}>
-                       <DropDown />
-                  
-                   </Grid.Column>
-                   <Grid.Column width={10}>
-                   <Container style = {{paddingTop: 35}} textAlign="center">
-                        <Button onClick={()=> history.goBack()} >Du-mă înapoi </Button>     
-                        <List style = {{paddingTop: 35}}>
-                        {this.renderList(this.props.programs)}
-                        </List>
-                        {this.forma()}
-                   </Container>
-                   
-                   </Grid.Column>
-                   <Grid.Column width={3}>
-                   <Image src="https://firebasestorage.googleapis.com/v0/b/brau-muntenesc.appspot.com/o/Imagini%20adaugate%20manual%2FAsset%203%20(1).svg?alt=media&token=867910af-5924-47d8-ac41-8c8269b21cb7">
-
-                    </Image>
-                    </Grid.Column>
-               </Grid.Row>
-           </Grid>
-                  
-                
-            
+            <Layout>
+               <Grid>
+                   <Grid.Row>
+                       <Grid.Column width={3}></Grid.Column>
+                       <Grid.Column width={10}>
+                       <Container style = {{paddingTop: 35}} textAlign="center">
+                            <Button onClick={()=> history.goBack()} >Du-mă înapoi </Button>
+                            <List style = {{paddingTop: 35}}>
+                            {this.renderList(this.props.programs)}
+                            </List>
+                            {this.forma()}
+                       </Container>
+                       </Grid.Column>
+                       <Grid.Column width={3}>
+                       <Image src="https://firebasestorage.googleapis.com/v0/b/brau-muntenesc.appspot.com/o/Imagini%20adaugate%20manual%2FAsset%203%20(1).svg?alt=media&token=867910af-5924-47d8-ac41-8c8269b21cb7">
+                        </Image>
+                        </Grid.Column>
+                   </Grid.Row>
+               </Grid>
+            </Layout>
         )
-     
-
    }
 }
 
-
 const mapStateToProps = (state) => {
     return{
-       
         auth : state.auth,
         programs : Object.values(state.program),
-       
     }
 }
 

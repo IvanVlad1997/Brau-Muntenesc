@@ -8,11 +8,10 @@ import {
 } from 'semantic-ui-react'
 import {Link} from 'react-router-dom'
 
-const SegmentExamplePlaceholderGrid = () => (
+const IntalnesteInstructorii = () => (
   <Segment placeholder inverted color ="black">
     <Grid columns={2} stackable textAlign='center'>
       <Divider vertical></Divider>
-
       <Grid.Row verticalAlign='middle'>
         <Grid.Column>
         <Image 
@@ -25,7 +24,6 @@ const SegmentExamplePlaceholderGrid = () => (
           </Header>
           <Link className= "ui button red" to  ={{pathname: "https://www.facebook.com/vlad.ivan.33/" }} target="_blank" >Cunoaște-l mai bine</Link>
         </Grid.Column>
-
         <Grid.Column>
         <Image 
         circular
@@ -42,4 +40,4 @@ const SegmentExamplePlaceholderGrid = () => (
   </Segment>
 )
 
-export default SegmentExamplePlaceholderGrid
+export default IntalnesteInstructorii

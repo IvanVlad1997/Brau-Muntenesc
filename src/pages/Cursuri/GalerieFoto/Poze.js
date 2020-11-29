@@ -7,6 +7,7 @@ import {LazyLoadImage} from 'react-lazy-load-image-component'
 import { Link } from 'react-router-dom';
 
 import history from '../../../history'
+import Layout from "../../../components/Cursuri/Layout/Layout";
 
 
 const Galerie = (props) => {
@@ -51,7 +52,6 @@ const Galerie = (props) => {
                 name: imageAsFile.name,
                 culink: false
             })
-            
          })
       })
       }
@@ -61,7 +61,6 @@ const Galerie = (props) => {
       const image = e.target.files[0]
       setImageAsFile(image)
   }
-
 
   const form =() => {
     if( !props.auth.email) return <div></div>
@@ -80,7 +79,6 @@ const Galerie = (props) => {
             </button> 
       </form>
       )
-    
   }
 
   const form2 =() => {
@@ -92,22 +90,17 @@ const Galerie = (props) => {
         <input  onChange={handleImageAsLink}
     // allows you to reach into your Link directory and upload image to the browser
           type="text"
-          
         />
          <label>nume</label>
          <input  onChange={handleImageAsName}
     // allows you to reach into your Link directory and upload image to the browser
           type="text"
-          
         />
-       
-        
            <button type ="submit">
                 Trimite                          
             </button> 
       </form>
       )
-    
   }
 
   const  handleSubmit2 = (e)  => {
@@ -118,14 +111,11 @@ const Galerie = (props) => {
 
   
  const handleImageAsLink = (e) => {
- 
   setLink(e.target.value)
- 
 }
   
 const handleImageAsName = (e) => {
   setname(e.target.value)
-
 }
 
 
@@ -135,10 +125,9 @@ const handleImageAsName = (e) => {
     else if (props.auth.email === "braumuntenesc@gmail.com")
       return(
         <Card.Meta>
-     <Button onClick = {()=> props.deleteGalerie(id, nume, culink)}>Șterge</Button>
-     </Card.Meta>
+             <Button onClick = {()=> props.deleteGalerie(id, nume, culink)}>Șterge</Button>
+        </Card.Meta>
       )
-    
   }
     
 
@@ -174,48 +163,41 @@ const handleImageAsName = (e) => {
 
 
     return (
-      <Container >
-        <Grid columns='equal' className="center aligned" style = {{paddingTop: 35}} stackable>
-          <Grid.Row>
-          <Grid.Column> 
-          <Button.Group size='large' >
-          <Button onClick={() => history.push('/Cursuri')}>Du-mă înapoi</Button>          
-              <Button.Or text="Sau" ></Button.Or>
-              <Link className= "ui button" to ="/galerievideo">La galeria video</Link>
-          </Button.Group>
-          <Header  
-                style = {{paddingTop: 20, paddingBottom: 20}}
-                color = "red"
-                textAlign= "center"
-                size='huge'>Galerie foto</Header>
-          </Grid.Column>
-            
-            
-          </Grid.Row>
-          <Grid.Row columns={2} >
-              {renderList()}
-              
-          </Grid.Row>
-        </Grid>
-     {/* form for handling file upload} */}
-           
-           {form()}
-           {form2()}
-
-           
+        <Layout>
+          <Container >
+            <Grid columns='equal' className="center aligned" style = {{paddingTop: 35}} stackable>
+              <Grid.Row>
+              <Grid.Column>
+                  <Button.Group size='large' >
+                      <Button onClick={() => history.push('/Cursuri')}>Du-mă înapoi</Button>
+                      <Button.Or text="Sau" ></Button.Or>
+                      <Link className= "ui button" to ="/galerievideo">La galeria video</Link>
+                  </Button.Group>
+                  <Header
+                        style = {{paddingTop: 20, paddingBottom: 20}}
+                        color = "red"
+                        textAlign= "center"
+                        size='huge'>Galerie foto
+                  </Header>
+              </Grid.Column>
+              </Grid.Row>
+              <Grid.Row columns={2} >
+                  {renderList()}
+              </Grid.Row>
+            </Grid>
+              {form()}
+              {form2()}
           </Container>
+        </Layout>
     )
 }
 
 const mapStateToProps = (state) => {
     return{
-       
         auth : state.auth,
         galerie : Object.values(state.galerie),
         dimensiuni: state.dimensiuni
-       
     }
 }
-
 
 export default connect(mapStateToProps,{aducGalerie, deleteGalerie, adaugaGalerieFotoLink})(Galerie)

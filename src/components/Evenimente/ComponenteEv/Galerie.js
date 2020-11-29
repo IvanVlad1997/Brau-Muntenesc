@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Grid,} from 'semantic-ui-react'
-import EmbededYT from '../../Cursuri/ComponenteCursuri/EmbededYt'
-import Titlu from '../../Cursuri/ComponenteCursuri/Titlu'
+import EmbededYT from '../../Cursuri/ComponenteCursuri/IntroYTVideo/EmbededYt'
+import Titlu from '../../Cursuri/ComponenteCursuri/AlteTitluri/Titlu'
 import {Link} from 'react-router-dom'
 
 class GalerieVideoEvenimente extends React.Component {

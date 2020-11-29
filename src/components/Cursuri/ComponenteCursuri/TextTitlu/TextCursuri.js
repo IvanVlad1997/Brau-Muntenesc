@@ -3,7 +3,6 @@ import {Header} from 'semantic-ui-react'
 
 
 const TextCursuri = ({latime}) => {
-
     if (latime < 600) 
     return(
         <React.Fragment>
@@ -19,7 +18,6 @@ const TextCursuri = ({latime}) => {
                                                 textAlign= "center"
                                                 size='huge'>Hai la Brâu!
                                             </Header>
-    
          </React.Fragment>
     )
     else
@@ -37,10 +35,8 @@ const TextCursuri = ({latime}) => {
                                                 textAlign= "center"
                                                 size='huge'>Hai la Brâu!
                                             </Header>
-    
          </React.Fragment>
     )
-  
 }
 
 export default TextCursuri

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Icon, Button} from 'semantic-ui-react'
-import history from '../../../history'
+import history from '../../../../history'
 
 
 class DropDown extends Component {
@@ -26,9 +26,7 @@ updateDimensions = () => {
   componentDidMount() {
     window.addEventListener('resize', this.updateDimensions);
   }
-  
 
-  
   showMenu(event) {
     event.preventDefault();
     
@@ -52,11 +50,8 @@ updateDimensions = () => {
        history.push(`/${event.target.value}`)
     }
   }
-  
-  
 
   render() {
-      
       if (this.state.width > 600) 
       return (
         
@@ -96,15 +91,11 @@ updateDimensions = () => {
     
       );
       else  return (
-        
         <div style={{paddingTop:20}} >
             <Button.Group size="tiny" vertical floated="left" color="red" compact>
-             
           <Button   onClick={this.showMenu}>
             <Icon name="arrow down"></Icon>
           </Button>
-          
-          
           {
             this.state.showMenu
               ? (
@@ -114,7 +105,6 @@ updateDimensions = () => {
                     this.dropdownMenu = element;
                   }}
                 >
-                 
                   <Button style={{fontSize:8}} value = "Cursuri" > Acasă </Button>  
                   <Button style={{fontSize:8}} value = "contact" > Contact </Button>
                   <Button style={{fontSize:8}} value = "galerie">  Foto </Button>
@@ -122,7 +112,6 @@ updateDimensions = () => {
                   <Button style={{fontSize:8}} value = "vlog"> Vlog </Button>
                   <Button style={{fontSize:8}} value = "preturi"> Prețuri </Button>
                   <Button style={{fontSize:8}} value = "program"> Program </Button>
-                  
                 </div>
               )
               : (

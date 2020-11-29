@@ -5,7 +5,7 @@ import {Button, Container, Grid, Header} from 'semantic-ui-react'
 import { Link } from 'react-router-dom';
 import {Form, Control} from 'react-redux-form'
 import ReactPlayer from 'react-player'
-import '../../Cursuri/ComponenteCursuri/UrmaresteVlog'
+import '../../Cursuri/ComponenteCursuri/UrmaresteVlogul/UrmaresteVlog'
 
 
 class GalerieVideoEvenimente extends React.Component {

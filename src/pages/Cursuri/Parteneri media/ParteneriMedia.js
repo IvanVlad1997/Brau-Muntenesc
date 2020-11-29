@@ -1,12 +1,12 @@
 import React from 'react'
 import {Card, Container,  Button,  Grid} from 'semantic-ui-react'
 import history from '../../../history'
+import Layout from "../../../components/Cursuri/Layout/Layout";
 
 function ParteneriMedia() {
   
     return (
-        <div>
-            <Button onClick={() => history.push("/Cursuri")}>Du-mă înapoi</Button>
+        <Layout>
             <Container  textAlign="center">
             
                 <h1 style={{ padding:50}} >Parteneri Media</h1>
@@ -72,19 +72,10 @@ function ParteneriMedia() {
                            <a href="https://deprahova.ro/actualitate/drumul-de-la-pasiune-la-afacere,-%C3%AEn-pa%C8%99i-de-hor%C4%83-br%C3%A2u-muntenesc,-%C8%99coala-din-ploie%C8%99ti-care-a-atras-bani-europeni-pentru-a-promova-tradi%C8%9Bia-rom%C3%A2neasc%C4%83.html" 
                           rel="noopener noreferrer" target="_blank"> <Card centered fluid raised image={'https://i.imgur.com/ZRWhVgt.jpg'} /></a> 
                         </Grid.Column>
-
-
-                       
-                      
-                        
-                        
-
                     </Grid.Row>
                 </Grid>
             </Container>
-             
-            
-        </div>
+        </Layout>
     )
 }
 

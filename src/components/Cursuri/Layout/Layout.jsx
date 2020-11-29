@@ -11,7 +11,7 @@ function Layout(props) {
     return(
         <div className="body">
             <div className="layout" >
-                <Sidebar.Pushable as={Segment} style={{border:0}}>
+                <Sidebar.Pushable as={Segment} style={{border:0, transform:"none"}}>
                         <Sidebar
                             as={Menu}
                             animation='overlay'
@@ -22,56 +22,67 @@ function Layout(props) {
                             width='wide'
                         >
                             <Link>
-                                <Menu.Item as='a' onClick={() => props.toggleSideBar() }>
+                                <Menu.Item onClick={() => props.toggleSideBar() }>
                                     <Icon name='angle left' />
                                 </Menu.Item>
                             </Link>
                             <Link to={"/"} >
-                                <Menu.Item as='a'>
+                                <Menu.Item >
                                     <Icon name='home' />
                                      Acasă
                                 </Menu.Item>
                             </Link>
+                            <Link to={"/Cursuri"} >
+                                <Menu.Item>
+                                    <Icon name='home' />
+                                    Cursuri
+                                </Menu.Item>
+                            </Link>
                             <Link to={"/galerie"} >
-                                <Menu.Item as='a'>
+                                <Menu.Item>
                                     <Icon name='images' />
                                     Galerie Foto
                                 </Menu.Item>
                             </Link>
                             <Link to={"/galerievideo"} >
-                                <Menu.Item as='a'>
+                                <Menu.Item>
                                     <Icon name='film' />
                                     Galerie video
                                 </Menu.Item>
                             </Link>
                             <Link to={"/vlog"} >
-                                <Menu.Item as='a'>
+                                <Menu.Item>
                                     <Icon name='youtube square' />
                                     Vlog
                                 </Menu.Item>
                             </Link>
                             <Link to={"/contact"} >
-                                <Menu.Item as='a'>
+                                <Menu.Item>
                                     <Icon name='phone' />
                                     Contact
                                 </Menu.Item>
                             </Link>
                             <Link to={"/preturi"} >
-                                <Menu.Item as='a'>
+                                <Menu.Item>
                                     <Icon name='payment' />
                                     Prețuri
                                 </Menu.Item>
                             </Link>
                             <Link to={"/program"} >
-                                <Menu.Item as='a'>
+                                <Menu.Item>
                                     <Icon name='calendar alternate outline' />
                                     Program
                                 </Menu.Item>
                             </Link>
                             <Link to={"/partenerimedia"} >
-                                <Menu.Item as='a'>
+                                <Menu.Item>
                                     <Icon name='newspaper outline' />
                                     Parteneri media
+                                </Menu.Item>
+                            </Link>
+                            <Link>
+                                <Menu.Item onClick={() => props.toggleSideBar() }>
+                                    <Icon name='angle left' />
                                 </Menu.Item>
                             </Link>
                         </Sidebar>
