@@ -48,8 +48,8 @@ class Main extends React.Component{
             <Grid verticalAlign="middle" columns={4} centered>
             <Grid.Row></Grid.Row>
             <Grid.Row></Grid.Row>
-            <Grid.Row >
-              <Grid.Column>
+            <Grid.Row>
+              <Grid.Column className="center-class" style={{display: "flex", alignItems:"center"}}>
               <StartPageCircle image1 ='https://i.imgur.com/sYCWMHd.jpg' 
                                 image2 = 'https://i.imgur.com/gKSUxuh.jpg'
                                 title = 'Cursuri'
@@ -57,7 +57,7 @@ class Main extends React.Component{
             </Grid.Column>
               <Grid.Column>
              </Grid.Column>
-              <Grid.Column>
+              <Grid.Column  style={{display: "flex", alignItems:"center"}}>
               <StartPageCircle image1 ='https://i.imgur.com/tbD3otb.jpg' 
                                 image2 = 'https://i.imgur.com/eygSYBy.jpg'
                             title = 'Broderie'
@@ -68,7 +68,7 @@ class Main extends React.Component{
             <Grid.Row>
               <Grid.Column>
               </Grid.Column>
-              <Grid.Column>
+              <Grid.Column  style={{display: "flex", alignItems:"center"}}>
               <StartPageCircle image1 ='https://i.imgur.com/B1HA1qs.jpg' 
                             image2 = 'https://i.imgur.com/QBvPmvw.jpg'
                             title = 'Evenimente'

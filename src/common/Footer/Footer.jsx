@@ -24,6 +24,8 @@ function Footer() {
                                 <Link to='/politicaconfidentialitate'>Politica de confidențialitate</Link>
                                 <br />
                                 <Link to='/Vlog'>Dansuri</Link>
+                                <br />
+                                <Link to='/Contact'>Locatie</Link>
                             </Grid.Column>
 
                             <Grid.Column width={6}>
@@ -59,6 +61,11 @@ function Footer() {
                             &copy; Brâu Muntenesc, 2020
                         </h2>
                 </Grid.Row>
+            <Grid.Row centered>
+                <h4>
+                    Brau Muntenesc este marcă înregistrată ® nr. 166609
+                </h4>
+            </Grid.Row>
                 <Grid.Row centered>
                         <h4>
                             Made by Ivan Vlad
