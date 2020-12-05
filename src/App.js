@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Main from './components/Main'
+import Main from './pages/PaginaPrincipala/Main'
 import {Router, Route,Switch, Link } from 'react-router-dom'
 import {connect} from 'react-redux'
 
@@ -11,8 +11,8 @@ import Cursuri from './pages/Cursuri/Cursuri/Cursuri'
 import Evenimente from './pages/Evenimente/Evenimente/Evenimente'
 import Atelier from './pages/Atelier/Home/Atelier'
 import {auth} from './firebase/firebase'
-import SingIn from './components/SingIn';
-import SingUp from './components/SingUp';
+import SingIn from './pages/SignIn/SingIn';
+import SingUp from './pages/SignUp/SingUp';
 import PanouCursanti from './pages/Cursuri/PanouCursanti/PanouCursanti'
 import ShowUser from './components/Cursuri/PanouCursanti/Users/ShowUser'
 import EditProfile from './components/Cursuri/PanouCursanti/Users/EditProfile';
@@ -21,9 +21,9 @@ import Preturi from './pages/Cursuri/Preturi/Preturi';
 import Program from './pages/Cursuri/Program/Program';
 import Vlog from './pages/Cursuri/Vlog/Vlog';
 import Poze from './pages/Cursuri/GalerieFoto/Poze'
-import Contact from './components/Cursuri/ComponenteCursuri/Contact';
+import Contact from './pages/Cursuri/Contact/Contact';
 import GalerieVideo from './pages/Cursuri/GalerieVideo/GalerieVideo'
-import Gal from './components/Evenimente/ComponenteEv/Gal';
+import Gal from './pages/Evenimente/GalerieVideo/Gal';
 import Page404 from './pages/Page404/Page404'
 import AdminPanel from './pages/Atelier/AdminPanel/AdminPanel';
 import NewCategory from './pages/Atelier/NewCategory/NewCategory'
@@ -35,6 +35,7 @@ import Cookies from 'universal-cookie';
 import {Button} from 'semantic-ui-react'
 import ParteneriMedia from './pages/Cursuri/Parteneri media/ParteneriMedia'
 import EditProduct from './pages/Atelier/EditProduct/EditProduct';
+import CumCumpar from "./pages/Atelier/CumCumpar/CumCumpar";
 
 
 class App extends React.Component {
@@ -141,6 +142,7 @@ eroareLogare() {
                       <Route exact path ="/product/:id" component={SingleProduct} />
                       <Route exact path ="/product/edit/:id" component={EditProduct} />
                       <Route exact path ="/politicaconfidentialitate" component={PoliticaConfidentialitate} />
+                      <Route exact path ="/cumcumpar" component={CumCumpar} />
                       <Route path="*" component={Page404}/>
                    </Switch>
               </div>

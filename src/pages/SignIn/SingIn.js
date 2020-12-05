@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button, Grid, Header } from 'semantic-ui-react'
 import {Control, Form} from 'react-redux-form'
-import {loginUser, googleLogin, facebookLogin} from '../redux/actions/AuthActions'
+import {loginUser, googleLogin, facebookLogin} from '../../redux/actions/AuthActions'
 import {connect} from 'react-redux'
 
 
@@ -62,9 +62,9 @@ class LoginForm extends React.Component {
           Folosește Google 
           </Button>  
 
-          <Button style={{ padding: 10 }} onClick={()=> this.handleClick2()} color ="facebook">
-          Folosește Facebook 
-          </Button>  
+          {/*<Button style={{ padding: 10 }} onClick={()=> this.handleClick2()} color ="facebook">*/}
+          {/*Folosește Facebook */}
+          {/*</Button>  */}
            
          
     </Grid.Column>

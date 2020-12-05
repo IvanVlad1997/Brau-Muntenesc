@@ -2,7 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {aducUserii, editeazaUser} from '../../../../redux/actions/index'
 import {Form, Control} from 'react-redux-form'
-import Loading from '../../../Loading'
+import Loading from '../../../../common/Loading/Loading'
 
 class EditUser extends React.Component {
     componentDidMount() {

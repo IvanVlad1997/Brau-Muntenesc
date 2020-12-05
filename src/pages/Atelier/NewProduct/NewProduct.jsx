@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import {adaugaProdus} from '../../../redux/Produces/ProducesActions'
 import {connect} from 'react-redux'
 import { aducCategorie } from '../../../redux/CategorieAtelier/CategorieAtelierActions';
-import Loading from '../../../components/Loading';
+import Loading from '../../../common/Loading/Loading';
 
 const NewCategory = (props) => {
   const {aducCategorie} = props

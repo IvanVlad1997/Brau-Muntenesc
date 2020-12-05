@@ -1,6 +1,6 @@
 import React from 'react'
 import {Card} from 'semantic-ui-react'
-import Cardu from '../Card'
+import Cardu from './Card'
 
 const Abureli = ({latime}) => {
     if (latime < 600) {

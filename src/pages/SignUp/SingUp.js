@@ -1,7 +1,7 @@
 import React from 'react'
 import { Grid, Header } from 'semantic-ui-react'
 import {Form, Control} from 'react-redux-form'
-import {singupUser} from '../redux/actions/AuthActions'
+import {singupUser} from '../../redux/actions/AuthActions'
 import {connect} from 'react-redux'
 
 

@@ -1,8 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import {Button, Container, Grid, Icon, Header} from 'semantic-ui-react'
-import history from '../../../history'
-import Layout from "../Layout/Layout";
+import Layout from "../../../components/Cursuri/Layout/Layout";
 
 
 const Contact = () => {
@@ -45,10 +44,24 @@ const Contact = () => {
                                 height="450"
                                 title="locatie"
                                 style={{border:0, paddingTop: 50}}
-
                                 aria-hidden="false"
                         ></iframe>
                     </div>
+                    <Grid.Row>
+                            SC BRÂU MUNTENESC SRL,
+                    </Grid.Row>
+
+                    <Grid.Row>
+                            CUI 41123710, J 29/1810/2019,
+                    </Grid.Row>
+
+                    <Grid.Row>
+                            RO73INGB0000999909056584, deschis la ING Bank
+                    </Grid.Row>
+
+                    <Grid.Row>
+                            RO27TREZ5215069XXX016500 deschis la Trezoreria Ploiești
+                    </Grid.Row>
                 </Grid>
             </Container>
         </Layout>

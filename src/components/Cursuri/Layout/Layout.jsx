@@ -1,8 +1,8 @@
 import React from 'react';
 import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
+import Footer from '../../../common/Footer/Footer'
 import './Layout.css';
-import {  Icon, Menu, Segment, Sidebar } from 'semantic-ui-react'
+import {Icon, Menu, Segment, Sidebar} from 'semantic-ui-react'
 import {connect} from "react-redux";
 import {toggleSideBar} from "../../../redux/side-nav/side-nav-actions";
 import {Link} from "react-router-dom";
@@ -11,7 +11,7 @@ function Layout(props) {
     return(
         <div className="body">
             <div className="layout" >
-                <Sidebar.Pushable as={Segment} style={{border:0, transform:"none"}}>
+                <Sidebar.Pushable as={Segment} style={{border:0, transform:"none", margin:0}}>
                         <Sidebar
                             as={Menu}
                             animation='overlay'
@@ -38,6 +38,16 @@ function Layout(props) {
                                     Cursuri
                                 </Menu.Item>
                             </Link>
+                            {  props.auth.email === 'braumuntenesc@gmail.com' ?
+                                <Link to={"/PanouCursanti"}>
+                                    <Menu.Item onClick={() => props.toggleSideBar()}>
+                                        <Icon name='certificate'/>
+                                        Panou Cursanti
+                                    </Menu.Item>
+                                </Link>
+                                :
+                                null
+                            }
                             <Link to={"/galerie"} >
                                 <Menu.Item onClick={() => props.toggleSideBar()}>
                                     <Icon name='images' />
@@ -86,7 +96,7 @@ function Layout(props) {
                                 </Menu.Item>
                             </Link>
                         </Sidebar>
-                    <Sidebar.Pusher>
+                    <Sidebar.Pusher style = {{paddingBottom:"25px", minHeight:"60vh"}}>
                                     <Header/>
                                     { props.children }
                     </Sidebar.Pusher>
@@ -99,7 +109,8 @@ function Layout(props) {
 
 const mapStateToProps = (state) => {
     return {
-        sideNav: state.sideNav
+        sideNav: state.sideNav,
+        auth: state.auth
     }
 }
 

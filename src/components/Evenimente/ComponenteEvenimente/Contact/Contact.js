@@ -2,8 +2,8 @@ import React from 'react'
 import {Grid, Header, Button} from 'semantic-ui-react'
 import {Form, Control} from 'react-redux-form'
 import {connect} from 'react-redux'
-import Titlu from '../../Cursuri/ComponenteCursuri/AlteTitluri/Titlu'
-import {trimiteCerereEveniment} from '../../../redux/actions/actiuni'
+import Titlu from '../../../Cursuri/ComponenteCursuri/AlteTitluri/Titlu'
+import {trimiteCerereEveniment} from '../../../../redux/actions/actiuni'
 
 const DespreNoi = (props) => {
 

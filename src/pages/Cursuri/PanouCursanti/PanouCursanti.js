@@ -2,7 +2,7 @@ import React from 'react'
 import { Redirect } from 'react-router-dom'
 import Tabel from '../../../components/Cursuri/PanouCursanti/Tabel'
 import {connect} from 'react-redux'
-import Loading from '../../../components/Loading'
+import Loading from '../../../common/Loading/Loading'
 import Layout from "../../../components/Cursuri/Layout/Layout";
 
 

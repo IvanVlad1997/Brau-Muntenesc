@@ -11,18 +11,11 @@ const Cardu = (props) => (
           color="red"
           size='large'
           name = {props.name}
-          
         />
       </Card.Header>
         <Card.Header textAlign="center"   >
         {props.titlu}
-      
-      
-         
-        
           </Card.Header>
-          
-        
         <Card.Description>
         {props.descriere}     
         </Card.Description>

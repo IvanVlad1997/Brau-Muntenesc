@@ -2,7 +2,7 @@ import React from 'react'
 import { Table, Button} from 'semantic-ui-react'
 import {Link} from 'react-router-dom'
 import Moment from 'react-moment'
-import Loading from '../../Loading'
+import Loading from '../../../common/Loading/Loading'
 import {connect} from 'react-redux'
 
 

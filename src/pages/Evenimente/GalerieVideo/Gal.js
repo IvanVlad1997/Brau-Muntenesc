@@ -5,7 +5,8 @@ import {Button, Container, Grid, Header} from 'semantic-ui-react'
 import { Link } from 'react-router-dom';
 import {Form, Control} from 'react-redux-form'
 import ReactPlayer from 'react-player'
-import '../../Cursuri/ComponenteCursuri/UrmaresteVlogul/UrmaresteVlog'
+import '../../../components/Cursuri/ComponenteCursuri/UrmaresteVlogul/UrmaresteVlog'
+import Layout from "../../../components/Evenimente/Layout/Layout";
 
 
 class GalerieVideoEvenimente extends React.Component {
@@ -79,6 +80,7 @@ class GalerieVideoEvenimente extends React.Component {
 
     render() {
     return (
+        <Layout>
       <Container style = {{paddingTop: 10}}>
         <Grid columns='equal' className="center aligned" style = {{paddingTop: 35}} >
          
@@ -114,6 +116,7 @@ class GalerieVideoEvenimente extends React.Component {
 
            
           </Container>
+        </Layout>
     )
     }
 }

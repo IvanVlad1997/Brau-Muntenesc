@@ -6,7 +6,7 @@ import {  Button, Grid,  Image, Icon } from 'semantic-ui-react'
 
 import { connect } from 'react-redux';
 import { aducProduse, deleteProdus} from '../../../redux/Produces/ProducesActions';
-import Loading from '../../../components/Loading';
+import Loading from '../../../common/Loading/Loading';
 import Layout from '../../../components/Atelier/Layout/Layout';
 import './SingleProduct.css'
 import { LazyLoadImage } from 'react-lazy-load-image-component';

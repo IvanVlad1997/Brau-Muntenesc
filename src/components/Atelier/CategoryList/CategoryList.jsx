@@ -3,7 +3,7 @@ import React, {useEffect} from 'react';
 import { connect } from 'react-redux';
 import {aducCategorie} from '../../../redux/CategorieAtelier/CategorieAtelierActions'
 
-import Loading from '../../Loading';
+import Loading from '../../../common/Loading/Loading';
 import CategoryItem from '../CategoryItem/CategoryItem'
 
 

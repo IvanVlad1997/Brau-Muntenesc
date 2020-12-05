@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import {aducUserii, aducPlatile} from '../../../../redux/actions/index'
 import { Button, List } from 'semantic-ui-react'
 import {Link} from 'react-router-dom'
-import Loading from '../../../Loading'
+import Loading from '../../../../common/Loading/Loading'
 import Moment from 'react-moment'
 
 

@@ -1,9 +1,9 @@
 import React from 'react' 
 import {Grid} from 'semantic-ui-react'
 import {connect} from 'react-redux'
+import './Main.css'
 
-
-import StartPageCircle from './StartPageCircle'
+import StartPageCircle from './Componente/StartPageCircle'
 
 class Main extends React.Component{
   
@@ -19,7 +19,7 @@ class Main extends React.Component{
                                               link = '/Cursuri'
                                               />  
                       </Grid.Column>
-                      <Grid.Column width={3}></Grid.Column>          
+                      <Grid.Column width={3}></Grid.Column>
                 </Grid.Row>
                 <Grid.Row>
                       <Grid.Column width={3} ></Grid.Column>
@@ -48,7 +48,7 @@ class Main extends React.Component{
             <Grid verticalAlign="middle" columns={4} centered>
             <Grid.Row></Grid.Row>
             <Grid.Row></Grid.Row>
-            <Grid.Row>
+            <Grid.Row >
               <Grid.Column>
               <StartPageCircle image1 ='https://i.imgur.com/sYCWMHd.jpg' 
                                 image2 = 'https://i.imgur.com/gKSUxuh.jpg'

@@ -2,7 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {aducUserii, plateste, aducPlatile} from '../../../../redux/actions/index'
 import {Form, Control} from 'react-redux-form'
-import Loading from '../../../Loading'
+import Loading from '../../../../common/Loading/Loading'
 import { Button} from 'semantic-ui-react'
 import {Link} from 'react-router-dom'
 class Plateste extends React.Component {
